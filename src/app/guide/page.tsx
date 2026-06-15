@@ -2,22 +2,8 @@ import Link from "next/link";
 
 export const metadata = { title: "New to Bengaluru? First-week guide — budgetblr" };
 
+// Universal — relevant whether you're moving from another Indian city or abroad.
 const CHECKLIST = [
-  {
-    emoji: "📱",
-    title: "Get a SIM",
-    body: "Grab a Jio or Airtel prepaid SIM — both have cheap unlimited-data packs (~₹300–₹400/month). Carry one passport-size photo, a photo ID and a local address. Stores activate eSIMs too if your phone supports it.",
-  },
-  {
-    emoji: "🏦",
-    title: "Open a bank account",
-    body: "A zero-balance salary or student account at HDFC, ICICI, Kotak (811) or SBI gets you UPI in minutes. Kotak 811 and Fi/Jupiter can be opened fully online with PAN + Aadhaar. You'll want this before signing a rent agreement.",
-  },
-  {
-    emoji: "🪪",
-    title: "PAN & Aadhaar basics",
-    body: "PAN is mandatory for the bank and any salary. If you're an Indian moving cities, your Aadhaar address need not be local — but keep a digital copy (mAadhaar app / DigiLocker). Both are your default proof everywhere.",
-  },
   {
     emoji: "📄",
     title: "Rent agreement + police verification",
@@ -43,6 +29,35 @@ const CHECKLIST = [
     title: "Gas connection / cylinder",
     body: "If your flat isn't piped (GAIL), you'll use an Indane/HP/Bharat cylinder. Getting a new connection needs ID + address proof; refills are booked by app or a quick call and cost ~₹900. Many PGs and furnished flats already include this.",
   },
+  {
+    emoji: "📲",
+    title: "Local SIM, if you need one",
+    body: "Already on Jio/Airtel/Vi? Just port or keep roaming — no need to do anything. If you do want a fresh local number, prepaid unlimited-data packs run ~₹300–₹400/month with a photo ID and local address.",
+  },
+];
+
+// Only really needed if you're arriving from another country.
+const ABROAD = [
+  {
+    emoji: "📱",
+    title: "Get an Indian SIM",
+    body: "As a foreign national you'll need your passport + visa + a local address proof; activation can take a day for non-residents. Airtel/Jio prepaid is cheapest; airport/Matrix SIMs are convenient but pricier.",
+  },
+  {
+    emoji: "🪪",
+    title: "PAN card (Form 49AA)",
+    body: "Foreign nationals can apply for a PAN using Form 49AA — you'll need it to open a bank account, sign a rent agreement and for any income. Apply online via NSDL/UTIITSL; it usually arrives within ~2 weeks.",
+  },
+  {
+    emoji: "🏦",
+    title: "Open an NRO/NRE account",
+    body: "Open an NRO account (HDFC, ICICI, Axis) with your passport, visa, PAN and an address proof — it's what links you to UPI and salary. NRE is for money you bring in from abroad. Use Wise for the transfers rather than card-ATM forex rates.",
+  },
+  {
+    emoji: "🛂",
+    title: "FRRO registration",
+    body: "On most long-term visas (student/employment, >180 days) you must register with the FRRO/FRO within 14 days of arrival on the e-FRRO portal. Keep your residential permit handy — landlords and banks may ask for it.",
+  },
 ];
 
 const LIVE = [
@@ -65,8 +80,8 @@ export default function GuidePage() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-[var(--color-muted)]">
             Just landed for that first job or college? Here's the no-fluff playbook for your first
-            week in namma ooru — SIM, bank, a roof, getting around, and eating like a local without
-            burning your stipend.
+            week in namma ooru — a roof, getting around, broadband and eating like a local without
+            burning your stipend. Moving from abroad? There&apos;s a section for you too.
           </p>
         </div>
       </section>
@@ -86,6 +101,30 @@ export default function GuidePage() {
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{c.body}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* moving from abroad */}
+      <section className="mx-auto max-w-6xl px-4 pb-4">
+        <div className="rounded-[var(--radius)] border border-[var(--color-line)] bg-[var(--color-surface)] p-6">
+          <div className="flex items-baseline gap-2">
+            <h2 className="text-xl font-semibold">🌍 Moving to Bengaluru from abroad?</h2>
+          </div>
+          <p className="mt-2 max-w-2xl text-sm text-[var(--color-muted)]">
+            If you already live in India you can skip this — you&apos;ve got a SIM, a bank account and
+            a PAN/Aadhaar. These steps are for foreign nationals arriving on a visa.
+          </p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {ABROAD.map((c) => (
+              <div key={c.title} className="rounded-[var(--radius)] border border-[var(--color-line)] p-4">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-xl">{c.emoji}</span>
+                  <h3 className="font-semibold">{c.title}</h3>
+                </div>
+                <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-muted)]">{c.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

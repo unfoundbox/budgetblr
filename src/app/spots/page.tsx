@@ -20,7 +20,7 @@ async function SpotGrid({ sp }: { sp: SP }) {
       {spots.length === 0 ? (
         <div className="card p-10 text-center text-[var(--color-muted)]">
           No spots match yet. Try widening the filters — or{" "}
-          <a href="/submit" className="text-[var(--color-accent)] hover:underline">add one</a>.
+          <a href="/community?tab=add" className="text-[var(--color-accent)] hover:underline">add one</a>.
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

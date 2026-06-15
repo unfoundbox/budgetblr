@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
-import maplibregl, { type StyleSpecification } from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { BLR_CENTER } from "@/lib/constants";
 
 export interface MapSpot {
@@ -16,26 +16,14 @@ export interface MapSpot {
   category?: string;
 }
 
-// Stamen Terrain (light) / dark via Stadia Maps. Keyless on localhost; API key
-// appended on the deployed domain.
-const STADIA_KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
-function makeStyle(dark: boolean): StyleSpecification {
+const KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
+function tileUrl(dark: boolean): string {
   const style = dark ? "alidade_smooth_dark" : "stamen_terrain";
-  const suffix = STADIA_KEY ? `?api_key=${STADIA_KEY}` : "";
-  return {
-    version: 8,
-    sources: {
-      stadia: {
-        type: "raster",
-        tiles: [`https://tiles.stadiamaps.com/tiles/${style}/{z}/{x}/{y}@2x.png${suffix}`],
-        tileSize: 256,
-        attribution:
-          '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://stamen.com/">Stamen Design</a> © <a href="https://openstreetmap.org/">OpenStreetMap</a>',
-      },
-    },
-    layers: [{ id: "stadia", type: "raster", source: "stadia" }],
-  };
+  const suffix = KEY ? `?api_key=${KEY}` : "";
+  return `https://tiles.stadiamaps.com/tiles/${style}/{z}/{x}/{y}{r}.png${suffix}`;
 }
+const ATTRIB =
+  '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://stamen.com/">Stamen Design</a> © <a href="https://openstreetmap.org/">OpenStreetMap</a>';
 
 export function MapView({
   spots,
@@ -56,62 +44,46 @@ export function MapView({
     if (!ref.current) return;
     const first = spots[0];
     const center: [number, number] = single && first
-      ? [first.lng, first.lat]
-      : [BLR_CENTER.lng, BLR_CENTER.lat];
+      ? [first.lat, first.lng]
+      : [BLR_CENTER.lat, BLR_CENTER.lng];
 
-    const map = new maplibregl.Map({
-      container: ref.current,
-      style: makeStyle(dark),
+    const map = L.map(ref.current, { zoomControl: !single, scrollWheelZoom: !single }).setView(
       center,
-      zoom: single ? 14 : zoom,
-      attributionControl: { compact: true },
-    });
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
-    if (!single) map.addControl(new maplibregl.GeolocateControl({ trackUserLocation: false }), "top-right");
+      single ? 14 : zoom,
+    );
+    L.tileLayer(tileUrl(dark), { maxZoom: 20, attribution: ATTRIB }).addTo(map);
 
     for (const s of spots) {
       if (s.lat == null || s.lng == null) continue;
-      const el = document.createElement("a");
-      el.href = `/spots/${s.slug}`;
-      el.className = "blr-pin";
-      el.textContent = s.emoji ?? "📍";
-      el.title = s.name;
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([s.lng, s.lat])
-        .addTo(map);
+      const icon = L.divIcon({
+        className: "blr-pin",
+        html: `<div class="blr-dot">${s.emoji ?? "📍"}</div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15],
+        popupAnchor: [0, -14],
+      });
+      const marker = L.marker([s.lat, s.lng], { icon, title: s.name }).addTo(map);
       if (!single) {
-        marker.setPopup(
-          new maplibregl.Popup({ offset: 24, closeButton: false }).setHTML(
-            `<strong>${s.name}</strong>${s.price ? `<br/><span style="color:var(--color-accent)">${s.price}</span>` : ""}<br/><a href="/spots/${s.slug}" style="color:var(--color-accent)">View →</a>`,
-          ),
+        marker.bindPopup(
+          `<strong>${s.name}</strong>${s.price ? `<br/><span style="color:var(--color-accent)">${s.price}</span>` : ""}<br/><a href="/spots/${s.slug}" style="color:var(--color-accent)">View →</a>`,
+          { closeButton: false },
         );
       }
     }
 
-    return () => map.remove();
+    const ro = new ResizeObserver(() => map.invalidateSize());
+    ro.observe(ref.current);
+    return () => {
+      ro.disconnect();
+      map.remove();
+    };
   }, [spots, zoom, single, dark]);
 
   return (
-    <>
-      <div ref={ref} style={{ height, width: "100%" }} className="overflow-hidden rounded-[var(--radius)] border border-[var(--color-line)]" />
-      <style>{`
-        .blr-pin {
-          display:grid; place-items:center;
-          width:30px; height:30px; font-size:16px;
-          background:var(--color-surface);
-          border:1.5px solid var(--color-line); border-radius:999px;
-          box-shadow:0 2px 6px rgba(0,0,0,.18); cursor:pointer; text-decoration:none;
-        }
-        .blr-pin:hover { border-color:var(--color-accent); transform:scale(1.12); }
-        .maplibregl-popup-content {
-          border-radius:12px; font-family:inherit; font-size:13px;
-          background:var(--color-surface); color:var(--color-ink);
-        }
-        .maplibregl-popup-anchor-top .maplibregl-popup-tip { border-bottom-color:var(--color-surface); }
-        .maplibregl-popup-anchor-bottom .maplibregl-popup-tip { border-top-color:var(--color-surface); }
-        .maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color:var(--color-surface); }
-        .maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color:var(--color-surface); }
-      `}</style>
-    </>
+    <div
+      ref={ref}
+      style={{ height, width: "100%" }}
+      className="overflow-hidden rounded-[var(--radius)] border border-[var(--color-line)]"
+    />
   );
 }

@@ -1,5 +1,6 @@
 import { listSpotsForMap } from "@/lib/queries/spots";
-import { MapExplorer, type ExplorerSpot } from "@/components/MapExplorer";
+import { MapExplorerLoader } from "@/components/MapExplorerLoader";
+import type { ExplorerSpot } from "@/components/MapExplorer";
 import { formatPrice } from "@/lib/constants";
 
 export const metadata = { title: "Map" };
@@ -23,7 +24,7 @@ export default async function MapPage() {
 
   return (
     <div className="h-[calc(100svh-7rem)] min-h-[440px] w-full md:h-[calc(100svh-3.5rem)]">
-      <MapExplorer spots={explorerSpots} />
+      <MapExplorerLoader spots={explorerSpots} />
     </div>
   );
 }

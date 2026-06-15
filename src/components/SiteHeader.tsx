@@ -7,6 +7,7 @@ const NAV = [
   { href: "/events", label: "Events" },
   { href: "/neighborhoods", label: "Areas" },
   { href: "/guide", label: "New here?" },
+  { href: "/community", label: "Community" },
   { href: "/about", label: "About" },
 ];
 
@@ -31,7 +32,7 @@ export function SiteHeader() {
         </nav>
         <div className="ml-auto flex items-center gap-2">
           <ThemeToggle />
-          <Link href="/submit" className="btn-accent text-sm">
+          <Link href="/community?tab=add" className="btn-accent text-sm">
             + Add a spot
           </Link>
         </div>

@@ -27,7 +27,8 @@ export function SiteFooter() {
           <ul className="space-y-1.5 text-[var(--color-muted)]">
             <li><Link href="/guide" className="hover:text-[var(--color-ink)]">First-week guide</Link></li>
             <li><Link href="/transport" className="hover:text-[var(--color-ink)]">Getting around</Link></li>
-            <li><Link href="/submit" className="hover:text-[var(--color-ink)]">Add a spot</Link></li>
+            <li><Link href="/community?tab=add" className="hover:text-[var(--color-ink)]">Add a spot</Link></li>
+            <li><Link href="/community" className="hover:text-[var(--color-ink)]">Vote on spots</Link></li>
           </ul>
         </div>
         <div className="text-sm">

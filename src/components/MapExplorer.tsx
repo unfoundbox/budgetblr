@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "next-themes";
-import maplibregl, { type StyleSpecification } from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import {
   BLR_CENTER,
   CATEGORIES,
@@ -29,37 +29,31 @@ export interface ExplorerSpot {
 const KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
 const PRICE_ORDER = ["free", "under_100", "under_300", "under_1000"];
 
-// Stamen Terrain (light) / dark via Stadia Maps. Keyless on localhost; the API
-// key is appended on the deployed domain.
-function makeStyle(dark: boolean): StyleSpecification {
+// Stamen Terrain (light) / dark via Stadia Maps. Keyless on localhost.
+function tileUrl(dark: boolean): string {
   const style = dark ? "alidade_smooth_dark" : "stamen_terrain";
   const suffix = KEY ? `?api_key=${KEY}` : "";
-  return {
-    version: 8,
-    sources: {
-      stadia: {
-        type: "raster",
-        tiles: [`https://tiles.stadiamaps.com/tiles/${style}/{z}/{x}/{y}@2x.png${suffix}`],
-        tileSize: 256,
-        attribution:
-          '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://stamen.com/">Stamen Design</a> © <a href="https://openstreetmap.org/">OpenStreetMap</a>',
-      },
-    },
-    layers: [{ id: "stadia", type: "raster", source: "stadia" }],
-  };
+  return `https://tiles.stadiamaps.com/tiles/${style}/{z}/{x}/{y}{r}.png${suffix}`;
 }
+const ATTRIB =
+  '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://stamen.com/">Stamen Design</a> © <a href="https://openstreetmap.org/">OpenStreetMap</a>';
 
 function priceAllowed(band: string, max: string): boolean {
   if (max === "any") return true;
   if (max === "free") return band === "free";
-  const allowed = PRICE_ORDER.slice(0, PRICE_ORDER.indexOf(max) + 1);
-  return allowed.includes(band);
+  return PRICE_ORDER.slice(0, PRICE_ORDER.indexOf(max) + 1).includes(band);
+}
+
+function emojiFor(slug: string) {
+  return CATEGORIES.find((c) => c.slug === slug)?.emoji ?? "📍";
 }
 
 export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
   const mapEl = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<maplibregl.Map | null>(null);
-  const markersRef = useRef<Map<string, maplibregl.Marker>>(new Map());
+  const mapRef = useRef<L.Map | null>(null);
+  const tileRef = useRef<L.TileLayer | null>(null);
+  const layerRef = useRef<L.LayerGroup | null>(null);
+  const bySlug = useRef<Map<string, L.Marker>>(new Map());
   const { resolvedTheme } = useTheme();
   const dark = resolvedTheme === "dark";
 
@@ -86,59 +80,61 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
   // init map once
   useEffect(() => {
     if (!mapEl.current || mapRef.current) return;
-    const map = new maplibregl.Map({
-      container: mapEl.current,
-      style: makeStyle(dark),
-      center: [BLR_CENTER.lng, BLR_CENTER.lat],
-      zoom: 11,
-      attributionControl: { compact: true },
-    });
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
+    const map = L.map(mapEl.current, { zoomControl: false, attributionControl: true }).setView(
+      [BLR_CENTER.lat, BLR_CENTER.lng],
+      11,
+    );
+    L.control.zoom({ position: "bottomright" }).addTo(map);
+    tileRef.current = L.tileLayer(tileUrl(dark), { maxZoom: 20, attribution: ATTRIB }).addTo(map);
+    layerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
-    // keep the canvas sized to its container (handles late layout / resizes)
-    const ro = new ResizeObserver(() => map.resize());
+    const ro = new ResizeObserver(() => map.invalidateSize());
     ro.observe(mapEl.current);
-
     return () => {
       ro.disconnect();
       map.remove();
       mapRef.current = null;
-      markersRef.current.clear();
+      bySlug.current.clear();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // swap basemap on theme change (markers persist across setStyle)
-  useEffect(() => {
-    mapRef.current?.setStyle(makeStyle(dark));
-  }, [dark]);
-
-  // re-render markers when the filtered set changes
+  // swap basemap on theme change
   useEffect(() => {
     const map = mapRef.current;
-    if (!map) return;
-    markersRef.current.forEach((m) => m.remove());
-    markersRef.current.clear();
+    if (!map || !tileRef.current) return;
+    tileRef.current.remove();
+    tileRef.current = L.tileLayer(tileUrl(dark), { maxZoom: 20, attribution: ATTRIB }).addTo(map);
+    tileRef.current.bringToBack();
+  }, [dark]);
 
+  // render markers when the filtered set changes
+  useEffect(() => {
+    const layer = layerRef.current;
+    if (!layer) return;
+    layer.clearLayers();
+    bySlug.current.clear();
     for (const s of filtered) {
-      const el = document.createElement("div");
-      el.className = "blr-sq";
-      el.style.background = CATEGORY_COLOR[s.category] ?? "#64748b";
-      el.textContent = CATEGORIES.find((c) => c.slug === s.category)?.emoji ?? "📍";
-      el.title = s.name;
-      const popup = new maplibregl.Popup({ offset: 18, closeButton: false }).setHTML(
+      const color = CATEGORY_COLOR[s.category] ?? "#64748b";
+      const icon = L.divIcon({
+        className: "blr-pin",
+        html: `<div class="blr-sq" style="background:${color}">${emojiFor(s.category)}</div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15], // centre the square on the coordinate — stays pinned
+        popupAnchor: [0, -14],
+      });
+      const html =
         `<strong>${s.name}</strong><br/>` +
-          `<span class="pop-meta">${s.neighborhood ?? ""}${s.neighborhood ? " · " : ""}<span style="color:var(--color-accent)">${s.price}</span></span>` +
-          (s.why ? `<br/><span class="pop-why">${s.why}</span>` : "") +
-          `<div class="pop-actions"><a href="/spots/${s.slug}">View →</a>` +
-          `<button class="pop-save" data-slug="${s.slug}">${readPicks().includes(s.slug) ? "♥ Saved" : "♡ Save"}</button></div>`,
-      );
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([s.lng, s.lat])
-        .setPopup(popup)
-        .addTo(map);
-      markersRef.current.set(s.slug, marker);
+        `<span class="pop-meta">${s.neighborhood ?? ""}${s.neighborhood ? " · " : ""}<span style="color:var(--color-accent)">${s.price}</span></span>` +
+        (s.why ? `<br/><span class="pop-why">${s.why}</span>` : "") +
+        `<div class="pop-actions"><a href="/spots/${s.slug}">View →</a>` +
+        `<button class="pop-save" data-slug="${s.slug}">${readPicks().includes(s.slug) ? "♥ Saved" : "♡ Save"}</button></div>`;
+      const marker = L.marker([s.lat, s.lng], { icon, title: s.name }).bindPopup(html, {
+        closeButton: false,
+      });
+      marker.addTo(layer);
+      bySlug.current.set(s.slug, marker);
     }
   }, [filtered]);
 
@@ -159,14 +155,14 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
   }, []);
 
   function flyTo(s: ExplorerSpot) {
-    mapRef.current?.flyTo({ center: [s.lng, s.lat], zoom: 15 });
-    markersRef.current.get(s.slug)?.togglePopup();
+    mapRef.current?.flyTo([s.lat, s.lng], 15);
+    bySlug.current.get(s.slug)?.openPopup();
   }
 
   function nearMe() {
     if (!navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition((pos) => {
-      mapRef.current?.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 14 });
+      mapRef.current?.flyTo([pos.coords.latitude, pos.coords.longitude], 14);
     });
   }
 
@@ -188,7 +184,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
     ];
     let matched = false;
     for (const [re, fn] of rules) if (re.test(q)) { fn(); matched = true; }
-    if (!matched && q) setQuery(q); // fall back to plain text search
+    if (!matched && q) setQuery(q);
   }
 
   return (
@@ -196,7 +192,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       <div ref={mapEl} className="h-full w-full" />
 
       {/* top-left: search + filters */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 p-3">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[1000] p-3">
         <div className="pointer-events-auto flex max-w-xl flex-col gap-2">
           <div className="flex gap-2">
             <input
@@ -233,7 +229,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       </div>
 
       {/* top-right: legend */}
-      <div className="absolute right-3 top-3 z-10 hidden rounded-[var(--radius)] border border-[var(--color-line)] bg-[var(--color-surface)]/95 p-3 text-xs shadow-sm backdrop-blur md:block">
+      <div className="absolute right-3 top-3 z-[1000] hidden rounded-[var(--radius)] border border-[var(--color-line)] bg-[var(--color-surface)]/95 p-3 text-xs shadow-sm backdrop-blur md:block">
         <div className="mb-1.5 font-semibold">Categories</div>
         <ul className="space-y-1">
           {CATEGORIES.map((c) => (
@@ -253,7 +249,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* bottom-left: Ask AI */}
       <button
         onClick={askAI}
-        className="absolute bottom-4 left-3 z-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-4 py-2.5 text-sm font-semibold text-[var(--color-bg)] shadow-md"
+        className="absolute bottom-4 left-3 z-[1000] inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-4 py-2.5 text-sm font-semibold text-[var(--color-bg)] shadow-md"
       >
         ✦ Ask AI
       </button>
@@ -261,14 +257,14 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* bottom-right: Spots list toggle */}
       <button
         onClick={() => setListOpen((v) => !v)}
-        className="absolute bottom-4 right-3 z-20 inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2.5 text-sm font-semibold shadow-md"
+        className="absolute bottom-4 right-3 z-[1001] inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2.5 text-sm font-semibold shadow-md"
       >
         ☰ {filtered.length} spots
       </button>
 
       {/* slide-in spots list */}
       <div
-        className={`absolute right-0 top-0 z-10 h-full w-80 max-w-[85vw] overflow-y-auto border-l border-[var(--color-line)] bg-[var(--color-surface)] p-3 pb-20 shadow-xl transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`absolute right-0 top-0 z-[1000] h-full w-80 max-w-[85vw] overflow-y-auto border-l border-[var(--color-line)] bg-[var(--color-surface)] p-3 pb-20 shadow-xl transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="mb-2 flex items-center justify-between">
           <span className="font-semibold">{filtered.length} spots</span>
@@ -279,7 +275,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
             <li key={s.slug}>
               <button onClick={() => flyTo(s)} className="card flex w-full items-center gap-2 p-2.5 text-left">
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[6px] text-sm" style={{ background: CATEGORY_COLOR[s.category] }}>
-                  {CATEGORIES.find((c) => c.slug === s.category)?.emoji}
+                  {emojiFor(s.category)}
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-medium">{s.name}</span>
@@ -291,31 +287,6 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
           ))}
         </ul>
       </div>
-
-      <style>{`
-        .blr-sq {
-          display:grid; place-items:center;
-          width:30px; height:30px; font-size:15px;
-          border-radius:8px; border:2px solid #fff;
-          box-shadow:0 2px 6px rgba(0,0,0,.3); cursor:pointer;
-          transition:transform .1s ease;
-        }
-        .blr-sq:hover { transform:scale(1.15); z-index:2; }
-        .maplibregl-popup-content {
-          border-radius:12px; font-family:inherit; font-size:13px; padding:10px 12px;
-          background:var(--color-surface); color:var(--color-ink);
-          box-shadow:0 8px 24px -8px rgba(0,0,0,.35);
-        }
-        .maplibregl-popup-anchor-top .maplibregl-popup-tip { border-bottom-color:var(--color-surface); }
-        .maplibregl-popup-anchor-bottom .maplibregl-popup-tip { border-top-color:var(--color-surface); }
-        .maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color:var(--color-surface); }
-        .maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color:var(--color-surface); }
-        .pop-meta { color:var(--color-muted); font-size:12px; }
-        .pop-why { color:var(--color-ink); }
-        .pop-actions { margin-top:6px; display:flex; gap:10px; align-items:center; }
-        .pop-actions a { color:var(--color-accent); font-weight:600; text-decoration:none; }
-        .pop-save { cursor:pointer; background:none; border:none; color:var(--color-muted); font:inherit; padding:0; }
-      `}</style>
     </div>
   );
 }

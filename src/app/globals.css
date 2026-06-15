@@ -143,3 +143,70 @@ select,
 textarea {
   font-size: 16px;
 }
+
+/* ───────────────────────── Leaflet maps ───────────────────────── */
+.leaflet-container {
+  background: var(--color-bg);
+  font-family: inherit;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.35);
+}
+.leaflet-popup-content {
+  font-family: inherit;
+  font-size: 13px;
+  margin: 10px 12px;
+}
+/* reset Leaflet's default divIcon chrome */
+.blr-pin {
+  background: transparent !important;
+  border: 0 !important;
+}
+/* MapExplorer: colored category square */
+.blr-sq {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease;
+}
+.blr-pin:hover .blr-sq {
+  transform: scale(1.18);
+}
+/* MapView: single round pin */
+.blr-dot {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-line);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+/* submit form input */
+.inp {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 16px;
+  outline: none;
+}
+
+/* map popup action row */
+.pop-meta { color: var(--color-muted); font-size: 12px; }
+.pop-why { color: var(--color-ink); }
+.pop-actions { margin-top: 6px; display: flex; gap: 10px; align-items: center; }
+.pop-actions a { color: var(--color-accent); font-weight: 600; text-decoration: none; }
+.pop-save { cursor: pointer; background: none; border: none; color: var(--color-muted); font: inherit; padding: 0; }

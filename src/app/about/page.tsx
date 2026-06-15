@@ -43,7 +43,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold">How spots get added</h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
               Anyone can{" "}
-              <Link href="/submit" className="font-semibold text-[var(--color-accent)] hover:underline">
+              <Link href="/community?tab=add" className="font-semibold text-[var(--color-accent)] hover:underline">
                 submit a spot
               </Link>{" "}
               they love — a name, where it is, roughly what it costs and why it's worth it. Every
@@ -77,7 +77,7 @@ export default function AboutPage() {
               honest.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="/submit" className="btn-accent text-sm">
+              <Link href="/community?tab=add" className="btn-accent text-sm">
                 + Add a spot
               </Link>
               <Link

@@ -200,27 +200,27 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && askAI()}
               placeholder={`Ask ${spots.length} spots: cheap dosa, free coworking…`}
-              className="w-full rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2 text-base shadow-sm outline-none"
+              className="glass w-full rounded-full px-4 py-2 text-base text-[var(--color-ink)] outline-none placeholder:text-[var(--color-muted)]"
             />
-            <button onClick={nearMe} className="chip shrink-0 shadow-sm">⌖ Near Me</button>
+            <button onClick={nearMe} className="chip glass shrink-0">⌖ Near Me</button>
           </div>
           <div className="flex flex-wrap gap-1.5">
-            <button className="chip shadow-sm" data-active={!cat && !tech} onClick={() => { setCat(null); setTech(false); }}>All</button>
+            <button className="chip glass" data-active={!cat && !tech} onClick={() => { setCat(null); setTech(false); }}>All</button>
             {CATEGORIES.map((c) => (
               <button
                 key={c.slug}
-                className="chip shadow-sm"
+                className="chip glass"
                 data-active={cat === c.slug}
                 onClick={() => { setCat(cat === c.slug ? null : c.slug); setTech(false); }}
               >
                 <span aria-hidden>{c.emoji}</span> {c.name}
               </button>
             ))}
-            <button className="chip shadow-sm" data-active={tech} onClick={() => { setTech((t) => !t); setCat(null); }}>🚀 Tech Spots</button>
+            <button className="chip glass" data-active={tech} onClick={() => { setTech((t) => !t); setCat(null); }}>🚀 Tech Spots</button>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {PRICE_BANDS.map((b) => (
-              <button key={b.slug} className="chip shadow-sm" data-active={price === b.slug} onClick={() => setPrice(b.slug)}>
+              <button key={b.slug} className="chip glass" data-active={price === b.slug} onClick={() => setPrice(b.slug)}>
                 {b.label}
               </button>
             ))}
@@ -229,7 +229,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       </div>
 
       {/* top-right: legend */}
-      <div className="absolute right-3 top-3 z-[1000] hidden rounded-[var(--radius)] border border-[var(--color-line)] bg-[var(--color-surface)]/95 p-3 text-xs shadow-sm backdrop-blur md:block">
+      <div className="glass-strong absolute right-3 top-3 z-[1000] hidden rounded-[var(--radius)] p-3 text-xs md:block">
         <div className="mb-1.5 font-semibold">Categories</div>
         <ul className="space-y-1">
           {CATEGORIES.map((c) => (
@@ -249,7 +249,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* bottom-left: Ask AI */}
       <button
         onClick={askAI}
-        className="absolute bottom-4 left-3 z-[1000] inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-4 py-2.5 text-sm font-semibold text-[var(--color-bg)] shadow-md"
+        className="glass-accent absolute bottom-4 left-3 z-[1000] inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold"
       >
         ✦ Ask AI
       </button>
@@ -257,14 +257,14 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* bottom-right: Spots list toggle */}
       <button
         onClick={() => setListOpen((v) => !v)}
-        className="absolute bottom-4 right-3 z-[1001] inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2.5 text-sm font-semibold shadow-md"
+        className="glass absolute bottom-4 right-3 z-[1001] inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold"
       >
         ☰ {filtered.length} spots
       </button>
 
       {/* slide-in spots list */}
       <div
-        className={`absolute right-0 top-0 z-[1000] h-full w-80 max-w-[85vw] overflow-y-auto border-l border-[var(--color-line)] bg-[var(--color-surface)] p-3 pb-20 shadow-xl transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`glass-strong absolute right-0 top-0 z-[1000] h-full w-80 max-w-[85vw] overflow-y-auto p-3 pb-20 transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="mb-2 flex items-center justify-between">
           <span className="font-semibold">{filtered.length} spots</span>

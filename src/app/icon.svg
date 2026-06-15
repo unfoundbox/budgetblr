@@ -1,22 +1,5 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="auto rickshaw">
-  <rect width="64" height="64" rx="14" fill="#1c1917"/>
-  <!-- auto rickshaw, side view, front facing right -->
-  <!-- main body with signature rounded canopy -->
-  <path d="M9 43 V31 C9 19 18 13 29 13 C40 13 48 19 48 31 V43 Z" fill="#f4b400"/>
-  <!-- front hood + headlight box -->
-  <path d="M48 29 H54 C55.6 29 56 30.2 56 31.6 V43 H48 Z" fill="#f4b400"/>
-  <!-- windscreen -->
-  <rect x="35" y="21" width="11" height="9" rx="2" fill="#1c1917" opacity="0.28"/>
-  <!-- passenger-side opening -->
-  <rect x="14" y="23" width="15" height="9" rx="3" fill="#1c1917" opacity="0.20"/>
-  <!-- green/orange lower trim (namma auto stripe) -->
-  <rect x="8" y="40" width="49" height="4" rx="2" fill="#e8590c"/>
-  <!-- headlight -->
-  <circle cx="53" cy="36" r="2.3" fill="#fff"/>
-  <!-- rear wheel -->
-  <circle cx="21" cy="47" r="6.6" fill="#111"/>
-  <circle cx="21" cy="47" r="2.4" fill="#f4b400"/>
-  <!-- front wheel -->
-  <circle cx="46" cy="47" r="6.6" fill="#111"/>
-  <circle cx="46" cy="47" r="2.4" fill="#f4b400"/>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="blr">
+  <rect width="64" height="64" rx="16" fill="#14a08a"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-size="27" font-weight="800" letter-spacing="-1.5" fill="#ffffff">blr</text>
 </svg>

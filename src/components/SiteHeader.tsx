@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
+  { href: "/", label: "Map" },
   { href: "/spots", label: "Spots" },
-  { href: "/map", label: "Map" },
   { href: "/events", label: "Events" },
   { href: "/neighborhoods", label: "Areas" },
   { href: "/guide", label: "New here?" },
@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-[var(--color-line)] bg-[var(--color-bg)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="grid h-7 w-7 place-items-center rounded-lg bg-[var(--color-accent)] text-sm text-white">₹</span>
+          <span className="grid h-7 w-7 place-items-center rounded-lg bg-[var(--color-accent)] text-[11px] font-extrabold tracking-tight text-white">blr</span>
           <span className="text-lg">budget<span className="text-[var(--color-accent)]">blr</span></span>
         </Link>
         <nav className="ml-2 hidden items-center gap-1 text-sm md:flex">

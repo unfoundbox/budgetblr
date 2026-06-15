@@ -16,22 +16,24 @@ export interface MapSpot {
   category?: string;
 }
 
-// Free CARTO raster basemap — light/dark variants. Swap for a vector provider in prod.
+// Stamen Terrain (light) / dark via Stadia Maps. Keyless on localhost; API key
+// appended on the deployed domain.
+const STADIA_KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
 function makeStyle(dark: boolean): StyleSpecification {
-  const variant = dark ? "dark_all" : "light_all";
+  const style = dark ? "alidade_smooth_dark" : "stamen_terrain";
+  const suffix = STADIA_KEY ? `?api_key=${STADIA_KEY}` : "";
   return {
     version: 8,
     sources: {
-      carto: {
+      stadia: {
         type: "raster",
-        tiles: ["a", "b", "c", "d"].map(
-          (s) => `https://${s}.basemaps.cartocdn.com/${variant}/{z}/{x}/{y}@2x.png`,
-        ),
+        tiles: [`https://tiles.stadiamaps.com/tiles/${style}/{z}/{x}/{y}@2x.png${suffix}`],
         tileSize: 256,
-        attribution: "© OpenStreetMap contributors © CARTO",
+        attribution:
+          '© <a href="https://stadiamaps.com/">Stadia Maps</a> © <a href="https://stamen.com/">Stamen Design</a> © <a href="https://openstreetmap.org/">OpenStreetMap</a>',
       },
     },
-    layers: [{ id: "carto", type: "raster", source: "carto" }],
+    layers: [{ id: "stadia", type: "raster", source: "stadia" }],
   };
 }
 

@@ -2,19 +2,26 @@
 // so the UI can render filters without a round-trip.
 
 export const CATEGORIES = [
-  { slug: "food", name: "Food", emoji: "🍛", blurb: "Darshinis, mess, thalis, street food, biryani" },
-  { slug: "coffee", name: "Coffee", emoji: "☕", blurb: "Filter coffee & budget cafes" },
-  { slug: "bars", name: "Bars & Drinks", emoji: "🍺", blurb: "Microbreweries & cheap pints" },
-  { slug: "grocery", name: "Grocery", emoji: "🧺", blurb: "HOPCOMS, local markets, supermarkets" },
-  { slug: "fitness", name: "Gym & Fitness", emoji: "🏋️", blurb: "Gyms, cult.fit, parks" },
-  { slug: "housing", name: "Housing", emoji: "🏠", blurb: "PGs, coliving, flats & flatmates" },
-  { slug: "work", name: "Work Spots", emoji: "💻", blurb: "Cafes, libraries, coworking" },
-  { slug: "accelerators", name: "Accelerators", emoji: "🚀", blurb: "Surge, Antler, YC-backed & more" },
-  { slug: "vcs", name: "VCs", emoji: "💸", blurb: "Accel, Blume, Peak XV, Elevation" },
-  { slug: "services", name: "Services", emoji: "🧰", blurb: "Laundry, salons, repair, tailors" },
+  { slug: "food", name: "Food", emoji: "🍛", color: "#ef4444", blurb: "Darshinis, mess, thalis, street food, biryani" },
+  { slug: "coffee", name: "Coffee", emoji: "☕", color: "#92400e", blurb: "Filter coffee & budget cafes" },
+  { slug: "bars", name: "Bars & Drinks", emoji: "🍺", color: "#ec4899", blurb: "Microbreweries & cheap pints" },
+  { slug: "grocery", name: "Grocery", emoji: "🧺", color: "#14b8a6", blurb: "HOPCOMS, local markets, supermarkets" },
+  { slug: "fitness", name: "Gym & Fitness", emoji: "🏋️", color: "#111827", blurb: "Gyms, cult.fit, parks" },
+  { slug: "housing", name: "Housing", emoji: "🏠", color: "#22c55e", blurb: "PGs, coliving, flats & flatmates" },
+  { slug: "work", name: "Work Spots", emoji: "💻", color: "#3b82f6", blurb: "Cafes, libraries, coworking" },
+  { slug: "accelerators", name: "Accelerators", emoji: "🚀", color: "#f97316", blurb: "Surge, Antler, YC-backed & more" },
+  { slug: "vcs", name: "VCs", emoji: "💸", color: "#7c3aed", blurb: "Accel, Blume, Peak XV, Elevation" },
+  { slug: "services", name: "Services", emoji: "🧰", color: "#64748b", blurb: "Laundry, salons, repair, tailors" },
 ] as const;
 
 export type CategorySlug = (typeof CATEGORIES)[number]["slug"];
+
+// "Tech Spots" quick filter = the startup-ecosystem categories (budgetsf parity).
+export const TECH_SPOT_CATEGORIES: CategorySlug[] = ["accelerators", "vcs", "work"];
+
+export const CATEGORY_COLOR: Record<string, string> = Object.fromEntries(
+  CATEGORIES.map((c) => [c.slug, c.color]),
+);
 
 export const PRICE_BANDS = [
   { slug: "any", label: "Any price", max: null },

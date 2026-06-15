@@ -1,33 +1,29 @@
 import { listSpotsForMap } from "@/lib/queries/spots";
-import { MapView, type MapSpot } from "@/components/MapView";
+import { MapExplorer, type ExplorerSpot } from "@/components/MapExplorer";
 import { formatPrice } from "@/lib/constants";
 
 export const metadata = { title: "Map" };
 
 export default async function MapPage() {
   const spots = await listSpotsForMap();
-  const mapSpots: MapSpot[] = spots
-    .filter((s) => s.lat != null && s.lng != null)
+  const explorerSpots: ExplorerSpot[] = spots
+    .filter((s) => s.lat != null && s.lng != null && s.category)
     .map((s) => ({
       slug: s.slug,
       name: s.name,
       lat: s.lat as number,
       lng: s.lng as number,
-      emoji: s.category?.emoji,
-      category: s.category?.slug,
+      category: s.category!.slug,
+      priceBand: s.price_band,
       price: formatPrice(s.price_min, s.price_max, s.price_unit),
+      why: s.why_worth_it,
+      neighborhood: s.neighborhood?.name ?? null,
+      locals: s.locals_count,
     }));
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold tracking-tight">Map</h1>
-        <p className="text-[var(--color-muted)]">
-          {mapSpots.length}{" "}budget spots across Bengaluru. Tap a pin for details, or use the
-          locate button to find what&apos;s near you.
-        </p>
-      </div>
-      <MapView spots={mapSpots} />
+    <div className="h-[calc(100svh-7rem)] min-h-[440px] w-full md:h-[calc(100svh-3.5rem)]">
+      <MapExplorer spots={explorerSpots} />
     </div>
   );
 }

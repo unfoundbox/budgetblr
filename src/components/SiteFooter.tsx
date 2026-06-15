@@ -37,11 +37,37 @@ export function SiteFooter() {
           <Link href="/newsletter" className="mt-3 inline-block text-[var(--color-accent)] hover:underline">
             Subscribe →
           </Link>
+          <a
+            href="https://www.instagram.com/budgetblr/"
+            target="_blank"
+            rel="noopener"
+            className="mt-3 flex items-center gap-1.5 text-[var(--color-muted)] hover:text-[var(--color-ink)]"
+          >
+            <InstagramIcon /> @budgetblr
+          </a>
         </div>
       </div>
-      <div className="border-t border-[var(--color-line)] px-4 py-4 text-center text-xs text-[var(--color-muted)]">
-        Made with filter coffee in Bengaluru · Prices are indicative, always confirm on the spot
+      <div className="flex flex-col items-center gap-2 border-t border-[var(--color-line)] px-4 py-4 text-center text-xs text-[var(--color-muted)] sm:flex-row sm:justify-between">
+        <span>Made with filter coffee in Bengaluru · Prices are indicative, always confirm on the spot</span>
+        <a
+          href="https://www.instagram.com/budgetblr/"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-1.5 hover:text-[var(--color-ink)]"
+        >
+          <InstagramIcon /> Follow on Instagram
+        </a>
       </div>
     </footer>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
   );
 }

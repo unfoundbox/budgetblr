@@ -174,10 +174,6 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       mapRef.current?.flyTo([pos.coords.latitude, pos.coords.longitude], 14);
     });
   }
-  function pickFromChat(s: ExplorerSpot) {
-    setAskOpen(false);
-    flyTo(s);
-  }
 
   return (
     <div className="relative h-full w-full overflow-hidden">
@@ -232,8 +228,23 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* selected spot card */}
       {selected && <SelectedCard spot={selected} onClose={() => setSelected(null)} />}
 
-      {/* Ask AI chat */}
-      {askOpen && <AskChat spots={spots} onClose={() => setAskOpen(false)} onPick={pickFromChat} />}
+      {/* Ask AI — coming soon */}
+      {askOpen && (
+        <div className="glass-strong absolute bottom-20 left-3 z-[1001] w-[20rem] max-w-[calc(100vw-1.5rem)] rounded-[var(--radius)] p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
+              Ask AI
+            </div>
+            <button onClick={() => setAskOpen(false)} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+            ✨ Smart natural-language search is{" "}
+            <strong className="text-[var(--color-ink)]">coming soon</strong>. For now, use the search
+            bar up top or the category filters to find spots.
+          </p>
+        </div>
+      )}
 
       {/* bottom-left: Ask AI FAB */}
       <button
@@ -318,117 +329,6 @@ function SelectedCard({ spot, onClose }: { spot: ExplorerSpot; onClose: () => vo
         <Link href={`/spots/${spot.slug}`} className="btn-accent flex-1 justify-center text-sm">View details</Link>
         <a href={mapsHref(spot)} target="_blank" rel="noopener" className="chip">📍 Directions</a>
         <button onClick={toggleSave} className="chip" data-active={saved} aria-pressed={saved}>{saved ? "♥" : "♡"}</button>
-      </div>
-    </div>
-  );
-}
-
-// Keyword/intent search over the spots (stands in for a semantic backend).
-function searchSpots(spots: ExplorerSpot[], q: string): ExplorerSpot[] {
-  const lower = q.toLowerCase();
-  const tokens = lower.split(/[^a-z0-9]+/).filter((t) => t.length > 2);
-  const catHit = CATEGORIES.find((c) => lower.includes(c.slug) || lower.includes(c.name.toLowerCase()));
-  const wantsFree = /\bfree\b|gratis/.test(lower);
-  const cheap = /cheap|budget|under/.test(lower);
-  const scored = spots.map((s) => {
-    const hay = `${s.name} ${s.why ?? ""} ${s.neighborhood ?? ""} ${s.category}`.toLowerCase();
-    let score = 0;
-    for (const t of tokens) if (hay.includes(t)) score += 2;
-    if (catHit && s.category === catHit.slug) score += 3;
-    if (wantsFree && s.priceBand === "free") score += 2;
-    if (cheap && ["free", "under_100", "under_300"].includes(s.priceBand)) score += 1;
-    return { s, score };
-  });
-  let res = scored.filter((x) => x.score > 0).sort((a, b) => b.score - a.score).map((x) => x.s);
-  if (res.length === 0) res = [...spots].sort((a, b) => b.locals - a.locals); // popular fallback
-  return res.slice(0, 6);
-}
-
-function bold(text: string) {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-    part.startsWith("**") && part.endsWith("**") ? <strong key={i}>{part.slice(2, -2)}</strong> : <span key={i}>{part}</span>,
-  );
-}
-
-interface ChatMsg { role: "user" | "bot"; text: string; results?: ExplorerSpot[] }
-
-function AskChat({
-  spots,
-  onClose,
-  onPick,
-}: {
-  spots: ExplorerSpot[];
-  onClose: () => void;
-  onPick: (s: ExplorerSpot) => void;
-}) {
-  const [q, setQ] = useState("");
-  const [msgs, setMsgs] = useState<ChatMsg[]>([
-    {
-      role: "bot",
-      text: 'Hey! Ask me anything about budget spots in Bengaluru. Try “cheap dosa”, “free coworking”, or “best filter coffee”.',
-    },
-  ]);
-  const endRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [msgs]);
-
-  function send() {
-    const text = q.trim();
-    if (!text) return;
-    const results = searchSpots(spots, text);
-    const top = results.slice(0, 3).map((s) => `**${s.name}** (${s.neighborhood ?? "Bengaluru"}, ${s.price.replace(/ per.*| \/month/, "")})`).join(", ");
-    const reply = `Found ${results.length} spots! Top picks: ${top}. Tap any to see it on the map.`;
-    setMsgs((m) => [...m, { role: "user", text }, { role: "bot", text: reply, results }]);
-    setQ("");
-  }
-
-  return (
-    <div className="glass-strong absolute bottom-20 left-3 z-[1001] flex max-h-[72vh] w-[24rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-[var(--radius)]">
-      <div className="flex items-center justify-between border-b border-[var(--color-line)] p-3">
-        <div className="flex items-center gap-2 font-semibold">
-          <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
-          budgetblr Search
-        </div>
-        <button onClick={onClose} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
-      </div>
-
-      <div className="flex-1 space-y-3 overflow-y-auto p-3">
-        {msgs.map((m, i) =>
-          m.role === "user" ? (
-            <div key={i} className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-sm bg-[var(--color-accent)] px-3 py-2 text-sm text-white">{m.text}</div>
-          ) : (
-            <div key={i} className="space-y-2">
-              <div className="w-fit max-w-[90%] rounded-2xl rounded-bl-sm bg-[var(--color-bg)] px-3 py-2 text-sm leading-relaxed">{bold(m.text)}</div>
-              {m.results?.map((s) => (
-                <button
-                  key={s.slug}
-                  onClick={() => onPick(s)}
-                  className="card flex w-full items-center gap-2 p-2.5 text-left"
-                >
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[6px] text-sm" style={{ background: CATEGORY_COLOR[s.category] }}>{emojiFor(s.category)}</span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-medium">{s.name}</span>
-                    <span className="block truncate text-xs text-[var(--color-muted)]">{[s.neighborhood, s.price, s.category].filter(Boolean).join(" · ")}</span>
-                  </span>
-                </button>
-              ))}
-            </div>
-          ),
-        )}
-        <div ref={endRef} />
-      </div>
-
-      <div className="flex gap-2 border-t border-[var(--color-line)] p-3">
-        <input
-          autoFocus
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && send()}
-          placeholder="Ask about budget spots…"
-          className="w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2 text-base outline-none"
-        />
-        <button onClick={send} className="btn-accent shrink-0 text-sm">Ask</button>
       </div>
     </div>
   );

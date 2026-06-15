@@ -17,9 +17,10 @@ function SignupForm() {
     const supabase = createClient();
     const { error } = await supabase
       .from("newsletter_subscribers")
-      .insert({ email: email.trim(), source: "newsletter_page" });
+      .insert({ email: email.trim().toLowerCase(), source: "newsletter_page" });
 
-    if (error) {
+    // 23505 = already subscribed — treat as success, not an error.
+    if (error && error.code !== "23505") {
       setStatus("error");
       setMessage("Hmm, that didn't go through. Mind trying again?");
       return;

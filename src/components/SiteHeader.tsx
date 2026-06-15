@@ -30,9 +30,9 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-3">
           <ThemeToggle />
-          <Link href="/community?tab=add" className="btn-accent text-sm">
+          <Link href="/community?tab=add" className="btn-accent btn-accent-light text-sm">
             + Add a spot
           </Link>
         </div>

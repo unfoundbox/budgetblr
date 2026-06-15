@@ -50,13 +50,13 @@ export function Filters({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <button className="chip" data-active={!category} onClick={() => setParam("category", "")}>
+        <button className="chip glass" data-active={!category} onClick={() => setParam("category", "")}>
           All
         </button>
         {CATEGORIES.map((c) => (
           <button
             key={c.slug}
-            className="chip"
+            className="chip glass"
             data-active={category === c.slug}
             onClick={() => setParam("category", c.slug)}
           >
@@ -69,7 +69,7 @@ export function Filters({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
         {PRICE_BANDS.map((b) => (
           <button
             key={b.slug}
-            className="chip"
+            className="chip glass"
             data-active={price === b.slug}
             onClick={() => setParam("price", b.slug)}
           >

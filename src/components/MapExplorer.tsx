@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -28,8 +29,9 @@ export interface ExplorerSpot {
 
 const KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
 const PRICE_ORDER = ["free", "under_100", "under_300", "under_1000"];
+const STATE_KEY = "blr_map_state";
+const SPOTS_CACHE = "blr_spots_cache";
 
-// Stamen Terrain (light) / dark via Stadia Maps. Keyless on localhost.
 function tileUrl(dark: boolean): string {
   const style = dark ? "alidade_smooth_dark" : "stamen_terrain";
   const suffix = KEY ? `?api_key=${KEY}` : "";
@@ -43,9 +45,11 @@ function priceAllowed(band: string, max: string): boolean {
   if (max === "free") return band === "free";
   return PRICE_ORDER.slice(0, PRICE_ORDER.indexOf(max) + 1).includes(band);
 }
-
 function emojiFor(slug: string) {
   return CATEGORIES.find((c) => c.slug === slug)?.emoji ?? "📍";
+}
+function mapsHref(s: ExplorerSpot) {
+  return `https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lng}`;
 }
 
 export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
@@ -62,6 +66,27 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
   const [price, setPrice] = useState("any");
   const [tech, setTech] = useState(false);
   const [listOpen, setListOpen] = useState(false);
+  const [selected, setSelected] = useState<ExplorerSpot | null>(null);
+  const [askOpen, setAskOpen] = useState(false);
+
+  // restore persisted filters + cache spots for reload resilience
+  useEffect(() => {
+    try {
+      const s = JSON.parse(localStorage.getItem(STATE_KEY) || "{}");
+      if (s.cat) setCat(s.cat);
+      if (s.price) setPrice(s.price);
+      if (s.tech) setTech(true);
+    } catch {}
+    try {
+      localStorage.setItem(SPOTS_CACHE, JSON.stringify({ t: Date.now(), spots }));
+    } catch {}
+  }, [spots]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ cat, price, tech }));
+    } catch {}
+  }, [cat, price, tech]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -77,6 +102,11 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
     });
   }, [spots, query, cat, price, tech]);
 
+  // typing in search opens the results panel
+  useEffect(() => {
+    if (query.trim()) setListOpen(true);
+  }, [query]);
+
   // init map once
   useEffect(() => {
     if (!mapEl.current || mapRef.current) return;
@@ -88,6 +118,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
     tileRef.current = L.tileLayer(tileUrl(dark), { maxZoom: 20, attribution: ATTRIB }).addTo(map);
     layerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
+    map.on("click", () => setSelected(null)); // tap empty map to dismiss card
 
     const ro = new ResizeObserver(() => map.invalidateSize());
     ro.observe(mapEl.current);
@@ -100,7 +131,6 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // swap basemap on theme change
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !tileRef.current) return;
@@ -121,54 +151,31 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
         className: "blr-pin",
         html: `<div class="blr-sq" style="background:${color}">${emojiFor(s.category)}</div>`,
         iconSize: [30, 30],
-        iconAnchor: [15, 15], // centre the square on the coordinate — stays pinned
-        popupAnchor: [0, -14],
+        iconAnchor: [15, 15],
       });
-      const html =
-        `<strong>${s.name}</strong><br/>` +
-        `<span class="pop-meta">${s.neighborhood ?? ""}${s.neighborhood ? " · " : ""}<span style="color:var(--color-accent)">${s.price}</span></span>` +
-        (s.why ? `<br/><span class="pop-why">${s.why}</span>` : "") +
-        `<div class="pop-actions"><a href="/spots/${s.slug}">View →</a>` +
-        `<button class="pop-save" data-slug="${s.slug}">${readPicks().includes(s.slug) ? "♥ Saved" : "♡ Save"}</button></div>`;
-      const marker = L.marker([s.lat, s.lng], { icon, title: s.name }).bindPopup(html, {
-        closeButton: false,
+      const marker = L.marker([s.lat, s.lng], { icon, title: s.name, riseOnHover: true });
+      marker.on("click", () => {
+        setAskOpen(false);
+        setSelected(s);
+        mapRef.current?.panTo([s.lat, s.lng], { animate: true });
       });
       marker.addTo(layer);
       bySlug.current.set(s.slug, marker);
     }
   }, [filtered]);
 
-  // delegated "save to picks" from popup buttons
-  useEffect(() => {
-    function onClick(e: MouseEvent) {
-      const btn = (e.target as HTMLElement).closest<HTMLElement>(".pop-save");
-      if (!btn) return;
-      const slug = btn.dataset.slug;
-      if (!slug) return;
-      const picks = readPicks();
-      const next = picks.includes(slug) ? picks.filter((x) => x !== slug) : [...picks, slug];
-      localStorage.setItem("blr_picks", JSON.stringify(next));
-      btn.textContent = next.includes(slug) ? "♥ Saved" : "♡ Save";
-    }
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
-  }, []);
-
   function flyTo(s: ExplorerSpot) {
     mapRef.current?.flyTo([s.lat, s.lng], 15);
-    bySlug.current.get(s.slug)?.openPopup();
+    setSelected(s);
   }
-
   function nearMe() {
     if (!navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition((pos) => {
       mapRef.current?.flyTo([pos.coords.latitude, pos.coords.longitude], 14);
     });
   }
-
-  // "Ask AI" = heuristic intent parse over the current query → category + price.
-  function askAI() {
-    const q = query.toLowerCase();
+  function runAsk(q: string) {
+    const lower = q.toLowerCase();
     const rules: [RegExp, () => void][] = [
       [/free|gratis/, () => setPrice("free")],
       [/cheap|budget|under/, () => setPrice("under_300")],
@@ -183,8 +190,10 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       [/accelerat|incubat|startup/, () => setTech(true)],
     ];
     let matched = false;
-    for (const [re, fn] of rules) if (re.test(q)) { fn(); matched = true; }
-    if (!matched && q) setQuery(q);
+    for (const [re, fn] of rules) if (re.test(lower)) { fn(); matched = true; }
+    setQuery(matched ? "" : q);
+    setListOpen(true);
+    setAskOpen(false);
   }
 
   return (
@@ -198,8 +207,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && askAI()}
-              placeholder={`Ask ${spots.length} spots: cheap dosa, free coworking…`}
+              placeholder={`Search ${spots.length} spots: dosa, PG, brewery…`}
               className="glass w-full rounded-full px-4 py-2 text-base text-[var(--color-ink)] outline-none placeholder:text-[var(--color-muted)]"
             />
             <button onClick={nearMe} className="chip glass shrink-0">⌖ Near Me</button>
@@ -207,12 +215,7 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
           <div className="flex flex-wrap gap-1.5">
             <button className="chip glass" data-active={!cat && !tech} onClick={() => { setCat(null); setTech(false); }}>All</button>
             {CATEGORIES.map((c) => (
-              <button
-                key={c.slug}
-                className="chip glass"
-                data-active={cat === c.slug}
-                onClick={() => { setCat(cat === c.slug ? null : c.slug); setTech(false); }}
-              >
+              <button key={c.slug} className="chip glass" data-active={cat === c.slug} onClick={() => { setCat(cat === c.slug ? null : c.slug); setTech(false); }}>
                 <span aria-hidden>{c.emoji}</span> {c.name}
               </button>
             ))}
@@ -229,15 +232,12 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       </div>
 
       {/* top-right: legend */}
-      <div className="glass-strong absolute right-3 top-3 z-[1000] hidden rounded-[var(--radius)] p-3 text-xs md:block">
+      <div className="glass-strong absolute right-3 top-3 z-[900] hidden rounded-[var(--radius)] p-3 text-xs md:block">
         <div className="mb-1.5 font-semibold">Categories</div>
         <ul className="space-y-1">
           {CATEGORIES.map((c) => (
             <li key={c.slug}>
-              <button
-                className="flex items-center gap-2 hover:text-[var(--color-accent)]"
-                onClick={() => { setCat(cat === c.slug ? null : c.slug); setTech(false); }}
-              >
+              <button className="flex items-center gap-2 hover:text-[var(--color-accent)]" onClick={() => { setCat(cat === c.slug ? null : c.slug); setTech(false); }}>
                 <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: c.color }} />
                 {c.name}
               </button>
@@ -246,12 +246,19 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
         </ul>
       </div>
 
-      {/* bottom-left: Ask AI */}
+      {/* selected spot card */}
+      {selected && <SelectedCard spot={selected} onClose={() => setSelected(null)} />}
+
+      {/* Ask AI modal */}
+      {askOpen && <AskModal onClose={() => setAskOpen(false)} onAsk={runAsk} />}
+
+      {/* bottom-left: Ask AI FAB */}
       <button
-        onClick={askAI}
-        className="glass-accent absolute bottom-4 left-3 z-[1000] inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold"
+        onClick={() => { setAskOpen((v) => !v); setSelected(null); }}
+        className={`absolute bottom-4 left-3 z-[1001] grid h-12 w-12 place-items-center rounded-full text-lg shadow-md ${askOpen ? "glass" : "glass-accent"}`}
+        aria-label="Ask AI"
       >
-        ✦ Ask AI
+        {askOpen ? "✕" : "✦"}
       </button>
 
       {/* bottom-right: Spots list toggle */}
@@ -262,21 +269,22 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
         ☰ {filtered.length} spots
       </button>
 
-      {/* slide-in spots list */}
-      <div
-        className={`glass-strong absolute right-0 top-0 z-[1000] h-full w-80 max-w-[85vw] overflow-y-auto p-3 pb-20 transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}
-      >
-        <div className="mb-2 flex items-center justify-between">
-          <span className="font-semibold">{filtered.length} spots</span>
-          <button onClick={() => setListOpen(false)} className="chip">Close</button>
+      {/* slide-in spots panel */}
+      <div className={`glass-strong absolute right-0 top-0 z-[1000] flex h-full w-80 max-w-[85vw] flex-col transition-transform ${listOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className="flex items-center justify-between border-b border-[var(--color-line)] p-3">
+          <span className="nums text-sm font-semibold">{filtered.length} of {spots.length} spots</span>
+          <div className="flex items-center gap-2">
+            <Link href="/community?tab=add" className="chip">+ Add</Link>
+            <button onClick={() => setListOpen(false)} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+          </div>
         </div>
-        <ul className="space-y-1.5">
-          {filtered.map((s) => (
+        <ul className="flex-1 space-y-1.5 overflow-y-auto p-3">
+          {filtered.length === 0 ? (
+            <li className="px-1 py-6 text-center text-sm text-[var(--color-muted)]">No spots match.</li>
+          ) : filtered.map((s) => (
             <li key={s.slug}>
               <button onClick={() => flyTo(s)} className="card flex w-full items-center gap-2 p-2.5 text-left">
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[6px] text-sm" style={{ background: CATEGORY_COLOR[s.category] }}>
-                  {emojiFor(s.category)}
-                </span>
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[6px] text-sm" style={{ background: CATEGORY_COLOR[s.category] }}>{emojiFor(s.category)}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-medium">{s.name}</span>
                   <span className="block truncate text-xs text-[var(--color-muted)]">{s.neighborhood}</span>
@@ -286,6 +294,76 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
             </li>
           ))}
         </ul>
+        <div className="border-t border-[var(--color-line)] p-3">
+          <div className="card p-3">
+            <div className="flex items-center gap-2 text-sm font-semibold">📨 The Friday drop</div>
+            <p className="mt-1 text-xs text-[var(--color-muted)]">New spots & price corrections, weekly. Free.</p>
+            <Link href="/newsletter" className="btn-accent mt-2 inline-flex text-xs">Subscribe →</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SelectedCard({ spot, onClose }: { spot: ExplorerSpot; onClose: () => void }) {
+  const cat = CATEGORIES.find((c) => c.slug === spot.category);
+  const [saved, setSaved] = useState(false);
+  useEffect(() => setSaved(readPicks().includes(spot.slug)), [spot.slug]);
+  function toggleSave() {
+    const picks = readPicks();
+    const next = picks.includes(spot.slug) ? picks.filter((x) => x !== spot.slug) : [...picks, spot.slug];
+    localStorage.setItem("blr_picks", JSON.stringify(next));
+    setSaved(next.includes(spot.slug));
+  }
+  return (
+    <div className="glass-strong absolute bottom-20 left-3 z-[1001] w-80 max-w-[calc(100vw-1.5rem)] rounded-[var(--radius)] p-4">
+      <div className="flex items-start justify-between">
+        <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-muted)]">Selected</span>
+        <button onClick={onClose} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+      </div>
+      <div className="mt-1 flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[7px] text-base" style={{ background: cat?.color }}>{cat?.emoji}</span>
+          <h3 className="font-semibold leading-tight">{spot.name}</h3>
+        </div>
+        <span className="nums shrink-0 rounded-full bg-[var(--color-accent-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--color-accent)]">{spot.price}</span>
+      </div>
+      {spot.neighborhood && <p className="mt-2 text-sm text-[var(--color-muted)]">{spot.neighborhood}</p>}
+      {spot.why && <p className="mt-2 text-sm">{spot.why}</p>}
+      <div className="mt-3 flex gap-2">
+        <Link href={`/spots/${spot.slug}`} className="btn-accent flex-1 justify-center text-sm">View details</Link>
+        <a href={mapsHref(spot)} target="_blank" rel="noopener" className="chip">📍 Directions</a>
+        <button onClick={toggleSave} className="chip" data-active={saved} aria-pressed={saved}>{saved ? "♥" : "♡"}</button>
+      </div>
+    </div>
+  );
+}
+
+function AskModal({ onClose, onAsk }: { onClose: () => void; onAsk: (q: string) => void }) {
+  const [q, setQ] = useState("");
+  return (
+    <div className="glass-strong absolute bottom-20 left-3 z-[1001] w-[22rem] max-w-[calc(100vw-1.5rem)] rounded-[var(--radius)] p-4">
+      <div className="mb-2 flex items-center justify-between">
+        <div className="flex items-center gap-2 font-semibold">
+          <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
+          budgetblr Search
+        </div>
+        <button onClick={onClose} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+      </div>
+      <div className="rounded-[var(--radius)] bg-[var(--color-bg)] p-3 text-sm text-[var(--color-ink)]/80">
+        Ask me anything about budget spots in Bengaluru. Try <em>“cheap dosa”</em>, <em>“free coworking”</em>, or <em>“best filter coffee”</em>.
+      </div>
+      <div className="mt-3 flex gap-2">
+        <input
+          autoFocus
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && q.trim() && onAsk(q.trim())}
+          placeholder="Ask about budget spots…"
+          className="w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2 text-base outline-none"
+        />
+        <button onClick={() => q.trim() && onAsk(q.trim())} className="btn-accent shrink-0 text-sm">Ask</button>
       </div>
     </div>
   );

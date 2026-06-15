@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
   { href: "/spots", label: "Spots" },
@@ -29,6 +30,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
           <Link href="/submit" className="btn-accent text-sm">
             + Add a spot
           </Link>

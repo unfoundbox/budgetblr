@@ -56,7 +56,7 @@ export default async function SpotPage({ params }: { params: Params }) {
           </div>
           <h1 className="text-3xl font-bold tracking-tight">{spot.name}</h1>
         </div>
-        <span className="shrink-0 rounded-full bg-[var(--color-accent-soft)] px-3 py-1.5 font-semibold text-[var(--color-accent)]">
+        <span className="nums shrink-0 rounded-full bg-[var(--color-accent-soft)] px-3 py-1.5 font-semibold text-[var(--color-accent)]">
           {formatPrice(spot.price_min, spot.price_max, spot.price_unit)}
         </span>
       </div>

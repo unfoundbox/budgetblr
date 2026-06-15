@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* class-based dark variant (next-themes toggles `.dark` on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: #fbf7ef;
   --color-surface: #ffffff;
@@ -17,6 +20,30 @@
   --radius: 0.85rem;
 }
 
+/* shadow + native-control colour scheme, per theme */
+:root {
+  color-scheme: light;
+  --shadow-card: 0 10px 30px -12px rgba(28, 25, 23, 0.18);
+}
+
+.dark {
+  color-scheme: dark;
+  --color-bg: #17140f;            /* warm near-black, not pure black */
+  --color-surface: #211d17;
+  --color-ink: #f4eee3;
+  --color-muted: #a39a8d;
+  --color-line: #342e25;
+  --color-accent: #fb7a33;        /* lifted saffron for contrast on dark */
+  --color-accent-soft: #3a2417;
+  --color-leaf: #4ca36a;
+  --color-grape: #a78bfa;
+  --shadow-card: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent; /* no grey flash on iOS tap */
+}
+
 * {
   border-color: var(--color-line);
 }
@@ -26,6 +53,29 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Rauno: focus rings via box-shadow (respects border-radius), not outline */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* Rauno: honour reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* tabular figures for prices & counts (no width jitter) */
+.nums {
+  font-variant-numeric: tabular-nums;
 }
 
 /* subtle paper grain via repeating dots */
@@ -44,11 +94,14 @@ body {
   font-size: 0.8rem;
   line-height: 1;
   background: var(--color-surface);
-  transition: all 0.12s ease;
+  transition: border-color 0.12s ease, color 0.12s ease, background 0.12s ease;
   white-space: nowrap;
   cursor: pointer;
 }
-.chip:hover { border-color: var(--color-accent); }
+/* Rauno: hover only on devices that actually hover */
+@media (hover: hover) {
+  .chip:hover { border-color: var(--color-accent); }
+}
 .chip[data-active="true"] {
   background: var(--color-ink);
   color: var(--color-bg);
@@ -61,9 +114,11 @@ body {
   border-radius: var(--radius);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px -12px rgba(28, 25, 23, 0.18);
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
 }
 
 .btn-accent {
@@ -71,10 +126,20 @@ body {
   align-items: center;
   gap: 0.4rem;
   background: var(--color-accent);
-  color: white;
+  color: #fff;
   border-radius: 999px;
   padding: 0.55rem 1.1rem;
   font-weight: 600;
   font-size: 0.9rem;
+  transition: filter 0.12s ease;
 }
-.btn-accent:hover { background: #d24f06; }
+@media (hover: hover) {
+  .btn-accent:hover { filter: brightness(0.93); }
+}
+
+/* Rauno: inputs ≥16px so iOS doesn't zoom on focus */
+input,
+select,
+textarea {
+  font-size: 16px;
+}

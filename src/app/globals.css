@@ -9,8 +9,8 @@
   --color-ink: #1c1917;
   --color-muted: #78716c;
   --color-line: #e7e1d6;
-  --color-accent: #14a08a;        /* pastel teal-green */
-  --color-accent-soft: #d6efe8;
+  --color-accent: #025d4d;        /* deep teal */
+  --color-accent-soft: #cfe7e0;
   --color-leaf: #2f7d4f;          /* garden-city green */
   --color-grape: #6d28d9;         /* purple line */
 
@@ -33,8 +33,8 @@
   --color-ink: #f4eee3;
   --color-muted: #a39a8d;
   --color-line: #342e25;
-  --color-accent: #34c3ac;        /* lifted teal for contrast on dark */
-  --color-accent-soft: #163a33;
+  --color-accent: #34b39a;        /* lifted teal (same hue) for contrast on dark */
+  --color-accent-soft: #0e3a31;
   --color-leaf: #4ca36a;
   --color-grape: #a78bfa;
   --shadow-card: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
@@ -103,9 +103,9 @@ body {
   .chip:hover { border-color: var(--color-accent); }
 }
 .chip[data-active="true"] {
-  background: var(--color-ink);
-  color: var(--color-bg);
-  border-color: var(--color-ink);
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
 }
 
 .card {

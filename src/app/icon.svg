@@ -1,5 +1,5 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="blr">
-  <rect width="64" height="64" rx="16" fill="#14a08a"/>
+  <rect width="64" height="64" rx="16" fill="#025d4d"/>
   <text x="32" y="43" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
         font-size="27" font-weight="800" letter-spacing="-1.5" fill="#ffffff">blr</text>
 </svg>

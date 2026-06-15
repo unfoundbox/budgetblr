@@ -1,0 +1,46 @@
+import Link from "next/link";
+
+export function SiteFooter() {
+  return (
+    <footer className="mt-16 border-t border-[var(--color-line)] bg-[var(--color-surface)]">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
+        <div>
+          <div className="flex items-center gap-2 font-bold">
+            <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-xs text-white">₹</span>
+            budgetblr
+          </div>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Living in Bengaluru on a budget — crowdsourced cheap eats, PGs, pints and more.
+          </p>
+        </div>
+        <div className="text-sm">
+          <div className="mb-2 font-semibold">Explore</div>
+          <ul className="space-y-1.5 text-[var(--color-muted)]">
+            <li><Link href="/spots" className="hover:text-[var(--color-ink)]">All spots</Link></li>
+            <li><Link href="/map" className="hover:text-[var(--color-ink)]">Map</Link></li>
+            <li><Link href="/events" className="hover:text-[var(--color-ink)]">Events</Link></li>
+            <li><Link href="/neighborhoods" className="hover:text-[var(--color-ink)]">Neighbourhoods</Link></li>
+          </ul>
+        </div>
+        <div className="text-sm">
+          <div className="mb-2 font-semibold">New to the city</div>
+          <ul className="space-y-1.5 text-[var(--color-muted)]">
+            <li><Link href="/guide" className="hover:text-[var(--color-ink)]">First-week guide</Link></li>
+            <li><Link href="/transport" className="hover:text-[var(--color-ink)]">Getting around</Link></li>
+            <li><Link href="/submit" className="hover:text-[var(--color-ink)]">Add a spot</Link></li>
+          </ul>
+        </div>
+        <div className="text-sm">
+          <div className="mb-2 font-semibold">The Friday drop</div>
+          <p className="text-[var(--color-muted)]">New spots & price corrections, weekly.</p>
+          <Link href="/newsletter" className="mt-3 inline-block text-[var(--color-accent)] hover:underline">
+            Subscribe →
+          </Link>
+        </div>
+      </div>
+      <div className="border-t border-[var(--color-line)] px-4 py-4 text-center text-xs text-[var(--color-muted)]">
+        Made with filter coffee in Bengaluru · Prices are indicative, always confirm on the spot
+      </div>
+    </footer>
+  );
+}

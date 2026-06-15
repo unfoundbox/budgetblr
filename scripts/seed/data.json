@@ -1,0 +1,3078 @@
+{
+  "spots": [
+    {
+      "name": "Vidyarthi Bhavan",
+      "neighborhood": "other",
+      "area": "Basavanagudi",
+      "address": "32, Gandhi Bazaar Main Rd, Basavanagudi, Bengaluru 560004",
+      "price_min": 40,
+      "price_max": 120,
+      "price_unit": "per_person",
+      "description": "Iconic veg breakfast institution running since 1943, legendary for its crispy, ghee-laden masala dosa carried out in towering stacks. Expect long queues and shared tables.",
+      "why_worth_it": "Bangalore's most famous masala dosa, barely touched ₹80 and worth every minute of the wait.",
+      "lat": 12.9421,
+      "lng": 77.5731,
+      "external_url": "https://www.vidyarthibhavan.in/",
+      "tags": [
+        "veg",
+        "iconic",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "CTR Shri Sagar (Central Tiffin Room)",
+      "neighborhood": "other",
+      "area": "Malleshwaram",
+      "address": "7th Cross, Margosa Rd, Malleshwaram, Bengaluru 560003",
+      "price_min": 40,
+      "price_max": 130,
+      "price_unit": "per_person",
+      "description": "A century-old Malleshwaram landmark famed for its butter-soaked benne masala dosa and chow chow bath. No-frills, always packed.",
+      "why_worth_it": "The benne dosa here is the gold standard, and a full plate still comes under ₹130.",
+      "lat": 13.0027,
+      "lng": 77.5712,
+      "tags": [
+        "veg",
+        "iconic",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Brahmin's Coffee Bar",
+      "neighborhood": "other",
+      "area": "Basavanagudi",
+      "address": "Ranga Rao Rd, Shankarapuram, Basavanagudi, Bengaluru 560004",
+      "price_min": 30,
+      "price_max": 90,
+      "price_unit": "per_person",
+      "description": "A tiny standing-only counter from 1965 serving only idli, vada, kharabath and filter coffee. The chutney is the stuff of legend.",
+      "why_worth_it": "Possibly the softest idli and best chutney in the city, for under ₹60.",
+      "lat": 12.9486,
+      "lng": 77.5722,
+      "tags": [
+        "veg",
+        "iconic",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Veena Stores",
+      "neighborhood": "other",
+      "area": "Malleshwaram",
+      "address": "Margosa Rd, Malleshwaram, Bengaluru 560003",
+      "price_min": 30,
+      "price_max": 90,
+      "price_unit": "per_person",
+      "description": "A hole-in-the-wall Malleshwaram counter mobbed every morning for fluffy idlis, vada and khara bath served at lightning speed.",
+      "why_worth_it": "Melt-in-mouth idlis for a few rupees, a true Bangalore breakfast pilgrimage.",
+      "lat": 13.005,
+      "lng": 77.5705,
+      "tags": [
+        "veg",
+        "iconic",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Taaza Thindi",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 4th Block",
+      "address": "1004, 26th Main Rd, 4th T Block, Jayanagar, Bengaluru 560041",
+      "price_min": 25,
+      "price_max": 80,
+      "price_unit": "per_person",
+      "description": "A modern darshini in Jayanagar drawing endless crowds for fluffy idli-vada and crisp masala dosa at rock-bottom prices.",
+      "why_worth_it": "Idli-vada at ₹24 and masala dosa at ₹35, possibly the best value breakfast in town.",
+      "lat": 12.9255,
+      "lng": 77.5838,
+      "tags": [
+        "veg",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Shivaji Military Hotel",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 8th Block",
+      "address": "718, 1st C Main, 45th Cross, 8th Block, Jayanagar, Bengaluru 560082",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A historic military hotel (since 1935) serving Bangalore's classic donne mutton biryani in stitched-leaf bowls. Opens mornings till sold out.",
+      "why_worth_it": "Old-school donne mutton biryani in a leaf bowl, a true non-veg legend.",
+      "lat": 12.9165,
+      "lng": 77.5855,
+      "tags": [
+        "non-veg",
+        "iconic",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Ranganna Military Hotel",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 7th Block",
+      "address": "61, Krishna Rajendra Rd, 7th Block, Jayanagar, Bengaluru 560070",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A long-running naati-style military hotel famed for fiery mutton biryani, leg soup and country-chicken fare.",
+      "why_worth_it": "Hearty Karnataka-style mutton biryani and leg soup that regulars swear by.",
+      "lat": 12.9268,
+      "lng": 77.583,
+      "tags": [
+        "non-veg",
+        "iconic",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Meghana Foods",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "80 Feet Rd, 5th Block, Koramangala, Bengaluru 560034",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "Cult Andhra-style restaurant whose spicy boneless chicken biryani has a near-fanatical following. Long waits at peak hours.",
+      "why_worth_it": "The Special boneless chicken biryani that broke the internet, generous and fiery.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "tags": [
+        "non-veg",
+        "biryani",
+        "andhra"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Nagarjuna (Koramangala)",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "138, 1st Cross Rd, KHB Colony, 5th Block, Koramangala, Bengaluru 560095",
+      "price_min": 180,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "Andhra institution since 1984 serving fiery Andhra meals on banana leaf plus its famous mutton and chicken biryani.",
+      "why_worth_it": "Andhra spice done right, the banana-leaf meal is a budget-friendly feast.",
+      "lat": 12.9345,
+      "lng": 77.621,
+      "external_url": "https://www.nagarjunarestaurants.com/",
+      "tags": [
+        "non-veg",
+        "andhra",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Nagarjuna (Indiranagar)",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "100 Feet Rd, Indiranagar, Bengaluru 560038",
+      "price_min": 180,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "The Indiranagar outpost of the beloved Andhra chain, packed at lunch for its spicy meals and andhra-style biryani.",
+      "why_worth_it": "Hearty fiery Andhra meal on a leaf, a Bangalore lunch ritual.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "https://www.nagarjunarestaurants.com/",
+      "tags": [
+        "non-veg",
+        "andhra",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Madurai Idli Shop",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "80 Feet Rd, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 40,
+      "price_max": 150,
+      "price_unit": "per_person",
+      "description": "A Tamil-style darshini knocking out soft idlis, ghee podi idli, dosas and good filter coffee at honest prices.",
+      "why_worth_it": "Ghee podi idli and pocket-friendly tiffin in pricey Indiranagar.",
+      "lat": 12.9745,
+      "lng": 77.6402,
+      "tags": [
+        "veg",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Nandhini Deluxe",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "CMH Rd, Indiranagar, Bengaluru 560038",
+      "price_min": 180,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A long-running Andhra chain serving spicy veg and non-veg meals and biryani, with a cleaner sit-down setting.",
+      "why_worth_it": "Reliable, spicy Andhra meals and biryani that won't blow the budget.",
+      "lat": 12.976,
+      "lng": 77.639,
+      "external_url": "https://nandhini.com/",
+      "tags": [
+        "non-veg",
+        "andhra",
+        "ac"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Madhuram",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 6",
+      "address": "1st Floor, Fooddays Complex, 5th Main, Sector 6, HSR Layout, Bengaluru 560102",
+      "price_min": 30,
+      "price_max": 120,
+      "price_unit": "per_person",
+      "description": "A no-frills South Indian breakfast joint loved locally for cheap idlis, pongal and an array of dosas.",
+      "why_worth_it": "Idlis at ₹30 and pongal at ₹45, breakfast that respects your wallet.",
+      "lat": 12.9101,
+      "lng": 77.6388,
+      "tags": [
+        "veg",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Andhra Mess (BTM)",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 2nd Stage",
+      "address": "BTM 2nd Stage, Bengaluru 560076",
+      "price_min": 120,
+      "price_max": 220,
+      "price_unit": "per_person",
+      "description": "Classic Andhra mess serving spicy banana-leaf meals with pappu, koora, podi and rice at lunch.",
+      "why_worth_it": "Fiery Andhra thali on a leaf at a fair price.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "tags": [
+        "andhra",
+        "thali",
+        "unlimited"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Andhra Mess (JP Nagar)",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar",
+      "address": "JP Nagar, Bengaluru 560078",
+      "price_min": 120,
+      "price_max": 220,
+      "price_unit": "per_person",
+      "description": "A neighbourhood Andhra mess dishing out veg and non-veg meals with the signature Andhra heat.",
+      "why_worth_it": "Big-value Andhra meal that locals queue for at lunch.",
+      "lat": 12.9077,
+      "lng": 77.5851,
+      "tags": [
+        "andhra",
+        "thali",
+        "unlimited"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Andhra Ruchulu",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar",
+      "address": "79/8, The President Hotel, Diagonal Rd, Jayanagar, Bengaluru 560011",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "Popular Andhra meals spot known for its spicy thalis, chicken ghee roast and chicken biryani.",
+      "why_worth_it": "Andhra meals plus a killer chicken ghee roast at a fair price.",
+      "lat": 12.929,
+      "lng": 77.5828,
+      "tags": [
+        "non-veg",
+        "andhra",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Abhiruchi Andhra Mess",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Tulasi Theatre Main Rd, Marathahalli, Bengaluru 560037",
+      "price_min": 120,
+      "price_max": 220,
+      "price_unit": "per_person",
+      "description": "A basic-looking but much-loved Andhra mess in Marathahalli serving tasty, spicy complete meals at low prices.",
+      "why_worth_it": "Looks plain, tastes brilliant, complete Andhra meals that punch above their price.",
+      "lat": 12.9569,
+      "lng": 77.7011,
+      "tags": [
+        "andhra",
+        "thali",
+        "unlimited"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "The Indian Dosa Company",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "AECS Layout, Kundalahalli, Whitefield, Bengaluru 560066",
+      "price_min": 40,
+      "price_max": 150,
+      "price_unit": "per_person",
+      "description": "A casual dosa-focused spot in Whitefield with a long menu of plain, masala and Mysore dosas at student-friendly prices.",
+      "why_worth_it": "Dosas from ₹40 in pricey Whitefield, big variety, easy on the wallet.",
+      "lat": 12.9698,
+      "lng": 77.7499,
+      "tags": [
+        "veg",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Mani's Dum Biryani",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "ITPL Main Rd, near Hope Farm Circle, Whitefield, Bengaluru 560066",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A homegrown Bangalore dum biryani chain offering generous veg and non-veg biryani portions at reasonable prices.",
+      "why_worth_it": "Big, fragrant dum biryani portions that fill you up without emptying your wallet.",
+      "lat": 12.992,
+      "lng": 77.7384,
+      "external_url": "https://manis.in/",
+      "tags": [
+        "non-veg",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Muralikrishna",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Outer Ring Rd, Marathahalli, Bengaluru 560037",
+      "price_min": 120,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A long-standing Marathahalli favourite for affordable South Indian meals, biryani and tiffin, popular with the office crowd.",
+      "why_worth_it": "Dependable budget biryani and meals in the heart of Marathahalli.",
+      "lat": 12.956,
+      "lng": 77.6975,
+      "tags": [
+        "non-veg",
+        "biryani",
+        "thali"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Hyderabad Biryani House (Since 2003)",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City",
+      "address": "Electronic City, Bengaluru 560100",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A well-rated Electronic City biryani joint serving Hyderabadi-style dum chicken and mutton biryani at value prices.",
+      "why_worth_it": "Solid Hyderabadi dum biryani close to the tech park crowd, easy on cost.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "tags": [
+        "non-veg",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "The Biryanis",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City",
+      "address": "Near Tech Mahindra Gate-3, Electronic City, Bengaluru 560100",
+      "price_min": 150,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A popular Electronic City spot for boxed and plated biryanis, a go-to for techies on a budget lunch run.",
+      "why_worth_it": "Quick, filling biryani fix for the Electronic City lunch hour.",
+      "lat": 12.8399,
+      "lng": 77.677,
+      "tags": [
+        "non-veg",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Channaveera Khanavali",
+      "neighborhood": "bellandur",
+      "area": "Bellandur",
+      "address": "Bellandur, Bengaluru 560103",
+      "price_min": 100,
+      "price_max": 200,
+      "price_unit": "per_person",
+      "description": "A rustic, home-style khanavali in Bellandur serving hot dosas, vadas, idlis and a hearty South Indian thali.",
+      "why_worth_it": "Honest home-style Karnataka meals and thali in tech-heavy Bellandur.",
+      "lat": 12.9268,
+      "lng": 77.6762,
+      "tags": [
+        "thali",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "New Udupi Upahar",
+      "neighborhood": "bellandur",
+      "area": "Bellandur",
+      "address": "Bellandur, Bengaluru 560103",
+      "price_min": 40,
+      "price_max": 100,
+      "price_unit": "per_person",
+      "description": "A fast, dhaba-style Udupi vegetarian spot where nothing crosses ₹100, churning out breakfast, meals and tiffin at speed.",
+      "why_worth_it": "No dish over ₹100 and food out in minutes, a budget-eater's dream.",
+      "lat": 12.9275,
+      "lng": 77.6735,
+      "tags": [
+        "veg",
+        "breakfast"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "R R R Biryani House",
+      "neighborhood": "hebbal",
+      "area": "Hebbal",
+      "address": "Kempapura, Opp Syndicate Bank, Hebbal, Bengaluru 560024",
+      "price_min": 130,
+      "price_max": 250,
+      "price_unit": "per_person",
+      "description": "A local Hebbal Andhra-style biryani house serving value chicken and mutton biryani plus South Indian sides.",
+      "why_worth_it": "Affordable, generous biryani plates handy for North Bangalore.",
+      "lat": 13.0358,
+      "lng": 77.597,
+      "tags": [
+        "non-veg",
+        "biryani"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "CTR Shri Sagar",
+      "neighborhood": "other",
+      "area": "Malleshwaram",
+      "address": "7th Cross, Margosa Road, Malleshwaram, Bengaluru 560003",
+      "price_min": 25,
+      "price_max": 120,
+      "price_unit": "per_person",
+      "description": "Central Tiffin Room, famous for its benne (butter) masala dosa and a rich, perfectly balanced filter coffee. A decades-old Malleshwaram landmark that draws weekend crowds from across the city.",
+      "why_worth_it": "Iconic benne dosa plus a great filter coffee without burning a hole in your pocket.",
+      "lat": 12.9977,
+      "lng": 77.5709,
+      "tags": [
+        "veg",
+        "iconic"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Airlines Hotel",
+      "neighborhood": "other",
+      "area": "Lavelle Road",
+      "address": "4, Madras Bank Road, off Lavelle Road, Bengaluru 560001",
+      "price_min": 30,
+      "price_max": 150,
+      "price_unit": "per_person",
+      "description": "A breezy open-air institution where you sip strong filter coffee under big trees with car-park table service. One of Bengaluru's earliest drive-in restaurants and a cult early-morning hangout for generations.",
+      "why_worth_it": "Old-school drive-in filter coffee under the trees, an experience as much as a drink.",
+      "lat": 12.9716,
+      "lng": 77.5995,
+      "tags": [
+        "veg",
+        "outdoor",
+        "iconic"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Hatti Kaapi - Indiranagar",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 20,
+      "price_max": 100,
+      "price_unit": "per_person",
+      "description": "A homegrown filter-coffee chain serving strong, authentic kaapi in classic brass tumblers, plus a solid budget breakfast of idli, poha and upma. Quick, no-fuss and consistently good.",
+      "why_worth_it": "Brass-tumbler filter kaapi and a full brekkie for around ₹70.",
+      "lat": 12.9784,
+      "lng": 77.6408,
+      "external_url": "https://www.hattikaapi.com/",
+      "tags": [
+        "veg",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "The Filter Coffee - Indiranagar",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "3050, 80 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 30,
+      "price_max": 300,
+      "price_unit": "per_person",
+      "description": "A bright, modern take on the darshini serving dosas, idlis and several styles of filter coffee, food on banana leaves and an open dosa bar. Clean, casual and reasonably easy on the wallet.",
+      "why_worth_it": "Authentic South Indian breakfast and filter coffee, sit-down style with an open dosa bar.",
+      "lat": 12.9714,
+      "lng": 77.647,
+      "external_url": "https://www.thefiltercoffee.in/",
+      "tags": [
+        "veg",
+        "ac",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "The Filter Coffee - Koramangala",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 5th Block",
+      "address": "130, 1st Main Road, KHB Colony, 5th Block, Koramangala, Bengaluru 560095",
+      "price_min": 30,
+      "price_max": 300,
+      "price_unit": "per_person",
+      "description": "The Koramangala branch of the popular South Indian breakfast joint, dishing out crisp dosas, traditional meals and good filter coffee. A reliable pick in a pricey neighbourhood.",
+      "why_worth_it": "Proper filter kaapi and dosas in the heart of Koramangala without the Koramangala bill.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "external_url": "https://www.thefiltercoffee.in/",
+      "tags": [
+        "veg",
+        "ac",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "The Filter Coffee - HSR Layout",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "HSR Layout, Bengaluru 560102",
+      "price_min": 30,
+      "price_max": 300,
+      "price_unit": "per_person",
+      "description": "HSR's outpost of the darshini-style chain, serving South Indian classics and several renditions of filter coffee. Casual, clean and reasonably priced.",
+      "why_worth_it": "A dependable filter-coffee-and-dosa fix amid HSR's expensive cafe scene.",
+      "lat": 12.9116,
+      "lng": 77.6446,
+      "external_url": "https://www.thefiltercoffee.in/",
+      "tags": [
+        "veg",
+        "ac",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Asha Tiffins - HSR Layout",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 7",
+      "address": "1170, 5th Main Road, Sector 7, HSR Layout, Bengaluru 560102",
+      "price_min": 15,
+      "price_max": 189,
+      "price_unit": "per_person",
+      "description": "A spotless, fast-moving self-service South Indian tiffin joint known for hot idlis, dosas and cheap coffee. Token-based counters and a constant crowd at breakfast.",
+      "why_worth_it": "Hot, hygienic tiffins and cheap filter coffee, hard to beat on value in HSR.",
+      "lat": 12.9121,
+      "lng": 77.6395,
+      "tags": [
+        "veg",
+        "budget",
+        "no-frills"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Namma Filter Coffee - BTM Layout",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 1st Stage",
+      "address": "BTM Layout 1st Stage, Bengaluru 560029",
+      "price_min": 20,
+      "price_max": 120,
+      "price_unit": "per_person",
+      "description": "A local outlet of the homegrown Namma Filter Coffee chain serving strong, aromatic filter coffee alongside soft idlis and dosas. No-frills, quick and very affordable.",
+      "why_worth_it": "Strong, fragrant filter kaapi and idlis for a song in BTM.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "tags": [
+        "veg",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Namma Filter Coffee - Jayanagar",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 3rd Block",
+      "address": "176/42, Dinakaran Complex, 22nd Cross, 3rd Block, near NMKRV College, Jayanagar, Bengaluru 560011",
+      "price_min": 20,
+      "price_max": 100,
+      "price_unit": "per_person",
+      "description": "A pocket-friendly Jayanagar spot open from early morning to midnight, known for strong aromatic filter coffee and soft idlis. Popular with students and early risers.",
+      "why_worth_it": "Long hours and great filter coffee, two eating for around ₹100.",
+      "lat": 12.9304,
+      "lng": 77.5834,
+      "tags": [
+        "veg",
+        "budget",
+        "late-night"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Maiyas",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 4th Block",
+      "address": "459/30, 30th Cross, Jayanagar 4th Block, Bengaluru 560041",
+      "price_min": 30,
+      "price_max": 180,
+      "price_unit": "per_person",
+      "description": "A beloved Jayanagar institution with over eight decades of history, famous for authentic South Indian breakfast and filter coffee. Signature plates like Kesari bath and Pongal pair perfectly with the kaapi.",
+      "why_worth_it": "Aromatic filter coffee at ₹40 and classic Karnataka tiffins at fair prices.",
+      "lat": 12.9264,
+      "lng": 77.5837,
+      "tags": [
+        "veg",
+        "ac",
+        "iconic"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Shanthi Sagar - JP Nagar",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 2nd Phase",
+      "address": "24th Main, JP Nagar 2nd Phase, Bengaluru 560078",
+      "price_min": 20,
+      "price_max": 200,
+      "price_unit": "per_person",
+      "description": "A widely-loved budget South Indian veg chain serving dosas, idlis and a dependable filter coffee. A go-to for quick, cheap and clean tiffins in JP Nagar.",
+      "why_worth_it": "Cheap dosas and filter coffee, a reliable JP Nagar tiffin staple.",
+      "lat": 12.9077,
+      "lng": 77.5851,
+      "tags": [
+        "veg",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Hatti Kaapi - Whitefield (Nexus Shantiniketan)",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "Nexus Shantiniketan Mall, ITPL Main Road, Whitefield, Bengaluru 560048",
+      "price_min": 20,
+      "price_max": 100,
+      "price_unit": "per_person",
+      "description": "The Whitefield mall outlet of the homegrown kaapi chain, serving strong filter coffee in brass tumblers plus quick South Indian snacks. A budget caffeine stop in the tech belt.",
+      "why_worth_it": "Authentic brass-tumbler filter kaapi for techies, far cheaper than mall cafes.",
+      "lat": 12.9959,
+      "lng": 77.7278,
+      "external_url": "https://www.hattikaapi.com/",
+      "tags": [
+        "veg",
+        "budget",
+        "ac"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Hatti Kaapi - Kadubeesanahalli (Marathahalli ORR)",
+      "neighborhood": "marathahalli",
+      "area": "Kadubeesanahalli",
+      "address": "Salarpuria Hallmark, A Block, Kadubeesanahalli, Outer Ring Road, near Marathahalli, Bengaluru 560103",
+      "price_min": 20,
+      "price_max": 100,
+      "price_unit": "per_person",
+      "description": "An Outer Ring Road outlet of Hatti Kaapi pouring strong, authentic Mysore filter coffee in classic brass tumblers, with light tiffin to go with it. Handy budget stop for the ORR office crowd.",
+      "why_worth_it": "Real filter kaapi on the ORR for the price of a vending-machine cup.",
+      "lat": 12.9395,
+      "lng": 77.6975,
+      "external_url": "https://www.hattikaapi.com/",
+      "tags": [
+        "veg",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "A2B - Adyar Ananda Bhavan, Electronic City",
+      "neighborhood": "electronic-city",
+      "area": "Neeladri Nagar, Electronic City",
+      "address": "1st Cross Road, Neeladri Nagar, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 25,
+      "price_max": 200,
+      "price_unit": "per_person",
+      "description": "A reliable veg chain famous for sweets, South Indian tiffins and a beloved filter coffee. Clean, quick and easy on the pocket for Electronic City techies.",
+      "why_worth_it": "Trusted, hygienic filter coffee and tiffins right in Electronic City.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "tags": [
+        "veg",
+        "ac",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "A2B - Adyar Ananda Bhavan, Hebbal",
+      "neighborhood": "hebbal",
+      "area": "Hebbal",
+      "address": "100 Feet Ring Road, Hebbal, Bengaluru 560024",
+      "price_min": 25,
+      "price_max": 200,
+      "price_unit": "per_person",
+      "description": "The Hebbal branch of the popular vegetarian chain, serving classic filter coffee, dosas, idlis and sweets. A dependable, affordable breakfast and coffee stop near the flyover.",
+      "why_worth_it": "Consistent filter coffee and cheap tiffins in coffee-starved Hebbal.",
+      "lat": 13.0358,
+      "lng": 77.597,
+      "tags": [
+        "veg",
+        "ac",
+        "budget"
+      ],
+      "category": "coffee"
+    },
+    {
+      "name": "Toit Brewpub",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "298, 100 Feet Road, Indiranagar, Bengaluru 560038",
+      "price_min": 350,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "Bangalore's most iconic microbrewery, a multi-level brick-and-timber temple to craft beer on 100 Feet Road. Six house brews on tap including the legendary Basmati Blonde and Dark Knight.",
+      "why_worth_it": "The city's beer mecca where one weekday pint and pizza still keeps you under ₹500 per head.",
+      "lat": 12.9716,
+      "lng": 77.6412,
+      "instagram": "https://www.instagram.com/toit_bangalore/",
+      "external_url": "https://toit.in/",
+      "tags": [
+        "iconic",
+        "microbrewery",
+        "late-night"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Prost Brew Pub",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 4th Block",
+      "address": "749, 10th Main, 80 Feet Road, 4th Block, Koramangala, Bengaluru 560034",
+      "price_min": 240,
+      "price_max": 450,
+      "price_unit": "per_person",
+      "description": "A dimly-lit, always-packed brewpub in the heart of Koramangala known for fresh house brews, wood-fired pizzas and live match screenings. House pints run around ₹240.",
+      "why_worth_it": "Genuinely value-for-money craft beer in Koramangala that locals swear is priced right.",
+      "lat": 12.9331,
+      "lng": 77.6306,
+      "tags": [
+        "microbrewery",
+        "iconic",
+        "ac"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Pecos",
+      "neighborhood": "other",
+      "area": "Brigade Road",
+      "address": "34, Rest House Road, off Brigade Road, MG Road, Bengaluru 560001",
+      "price_min": 150,
+      "price_max": 350,
+      "price_unit": "per_person",
+      "description": "A legendary three-floor retro rock pub founded in 1989 that serves only draught beer and plays only 60s-80s classic rock. Cult status, donated vinyl walls and famously cheap mugs.",
+      "why_worth_it": "Some of the cheapest draught in the city centre with a cult rock-and-roll soul.",
+      "lat": 12.9719,
+      "lng": 77.6076,
+      "external_url": "https://pecospub.com/",
+      "tags": [
+        "iconic",
+        "cheap-beer",
+        "rock"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Byg Brewski Brewing Company",
+      "neighborhood": "other",
+      "area": "Hennur",
+      "address": "22, Southern Asia Bible College, Hennur Bagalur Main Road, Byrathi, Bengaluru 560077",
+      "price_min": 350,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "One of India's largest microbreweries, a sprawling 65,000+ sq ft lakeside space seating thousands beside a koi pond. Huge range of in-house craft beers and continental food.",
+      "why_worth_it": "Massive open-air lakeside vibe where weekday happy hours keep a session affordable.",
+      "lat": 13.0739,
+      "lng": 77.6541,
+      "external_url": "https://bygbrewski.com/",
+      "instagram": "https://www.instagram.com/bygbrewski/",
+      "tags": [
+        "microbrewery",
+        "iconic",
+        "rooftop"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "House of Commons",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "Ground Floor, 1085, 14th Main Road, 18th Cross, Sector 3, HSR Layout, Bengaluru 560102",
+      "price_min": 150,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A reliably cheap HSR pub famous for discounted beer buckets, cocktail pitchers and back-to-back happy hour deals. A favourite pub-crawl starting point.",
+      "why_worth_it": "Buckets, pitchers and happy hours make it one of HSR's best cheap-drinks bets.",
+      "lat": 12.9116,
+      "lng": 77.6446,
+      "tags": [
+        "cheap-beer",
+        "happy-hours",
+        "late-night"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "BLR Brewing Co.",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "450, 1st Floor, 17th Cross Road, Sector 4, HSR Layout, Bengaluru 560102",
+      "price_min": 300,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "A homegrown HSR microbrewery turning out fresh small-batch craft beer with a casual neighbourhood-pub feel and solid pub grub.",
+      "why_worth_it": "Fresh house-brewed pints in HSR without the upscale-brewery markup.",
+      "lat": 12.9121,
+      "lng": 77.6446,
+      "external_url": "https://www.blrbrewing.com/",
+      "tags": [
+        "microbrewery",
+        "ac"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Gilly's Restobar",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "4th Floor, Outer Ring Road, Doddanekkundi, Marathahalli, Bengaluru 560037",
+      "price_min": 150,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A lively retro-and-current-hits restobar chain with a buzzing Marathahalli outlet. Draught beer towers, IMFL pegs from ₹75 and buy-one-get-one deals on weekdays.",
+      "why_worth_it": "₹75 pegs and BOGOF noon-to-6pm make it one of the cheapest post-work pours in town.",
+      "lat": 12.956,
+      "lng": 77.697,
+      "tags": [
+        "cheap-beer",
+        "happy-hours",
+        "ac"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Ironhill Bengaluru",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Outer Ring Road, beside Radisson Blu, Marathahalli, Bengaluru 560037",
+      "price_min": 350,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "An enormous, lavishly themed microbrewery seating well over 1,500 with eight house craft beers from Hefeweizen to Ragi Ale. Cost for two roughly ₹2,000 including beer.",
+      "why_worth_it": "Grand brewery experience that still works out budget-friendly per pint when shared.",
+      "lat": 12.956,
+      "lng": 77.701,
+      "external_url": "https://ironhillindia.com/bengaluru/",
+      "tags": [
+        "microbrewery",
+        "iconic",
+        "ac"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Brew and Barbeque - A Microbrewery Pub",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Soul Space Arena Mall, Outer Ring Road, Doddanekkundi, Marathahalli, Bengaluru 560037",
+      "price_min": 300,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "A combined microbrewery and barbecue pub where you grill at the table while drinking fresh house beer. Popular all-you-can vibe with the IT crowd.",
+      "why_worth_it": "Brew plus barbecue under one roof stretches a ₹500 budget into a full evening.",
+      "lat": 12.956,
+      "lng": 77.699,
+      "tags": [
+        "microbrewery",
+        "bbq"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "The Pump House",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 1st Phase",
+      "address": "15, 24th Main Road, 1st Phase, JP Nagar, Bengaluru 560078",
+      "price_min": 300,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "A friendly JP Nagar brewpub with its own microbrewery serving six house beers plus cocktails. Sample flights let you taste before you commit. Cost for two around ₹1,700.",
+      "why_worth_it": "Free tasting flights and weekday happy hours make South Bangalore's craft beer accessible.",
+      "lat": 12.9078,
+      "lng": 77.5851,
+      "external_url": "https://thepumphouse.in/",
+      "tags": [
+        "microbrewery",
+        "happy-hours"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Hakuna Matata",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar",
+      "address": "JP Nagar, Bengaluru 560078",
+      "price_min": 200,
+      "price_max": 450,
+      "price_unit": "per_person",
+      "description": "An open-air, African-themed rooftop pub with lush greenery, cobblestone paths and beer on tap. Indian-Chinese bar bites like dragon chicken and honey chilli potato.",
+      "why_worth_it": "Alfresco dine-under-the-stars vibe at JP Nagar prices that won't sting.",
+      "lat": 12.91,
+      "lng": 77.5855,
+      "tags": [
+        "rooftop",
+        "outdoor",
+        "late-night"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Windmills Craftworks",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "6th Floor, 331, Road 5B, EPIP Zone, Whitefield, Bengaluru 560066",
+      "price_min": 400,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "Whitefield's beloved microbrewery-cum-jazz-bar with a wall of books, live jazz stage and six house beers from Hefeweizen to IPA. More premium, but a single brew and snack stays in budget.",
+      "why_worth_it": "Live jazz, a book library and craft beer for the price of one pour and a starter.",
+      "lat": 12.981,
+      "lng": 77.727,
+      "external_url": "https://www.windmillscraftworks.com/",
+      "tags": [
+        "microbrewery",
+        "jazz",
+        "iconic"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Vapour Pub and Brewery",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "773, 100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 300,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "A rooftop microbrewery on 100 Feet Road with comfortable open-air seating, a wide craft beer selection and live music nights at reasonable rates.",
+      "why_worth_it": "Rooftop craft beer in pricey Indiranagar that stays surprisingly easy on the wallet.",
+      "lat": 12.9694,
+      "lng": 77.6411,
+      "tags": [
+        "microbrewery",
+        "rooftop",
+        "live-music"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "What the Ale?!",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City",
+      "address": "5th Floor, Neeladri Road, Neeladri Nagar, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 300,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "Electronic City's go-to brewpub with an eclectic craft beer line-up, a charcoal grill, curries and pizzas. A rare proper microbrewery in the far south tech belt.",
+      "why_worth_it": "The most accessible craft beer in Electronic City for the after-work IT crowd.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "tags": [
+        "microbrewery",
+        "ac"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "Tipsy Bull - The Bar Exchange",
+      "neighborhood": "bellandur",
+      "area": "Bellandur / Kadubeesanahalli",
+      "address": "603, Outer Ring Road, Bellandur, Bengaluru 560103",
+      "price_min": 250,
+      "price_max": 500,
+      "price_unit": "per_person",
+      "description": "A restobar on the Bellandur-Marathahalli ORR stretch where drink prices rise and fall stock-market style during the bar exchange hours. Cost for two around ₹1,800.",
+      "why_worth_it": "Stock-market pricing means patient drinkers snag pours at genuinely cheap lows.",
+      "lat": 12.932,
+      "lng": 77.685,
+      "tags": [
+        "rooftop",
+        "happy-hours",
+        "late-night"
+      ],
+      "category": "bars"
+    },
+    {
+      "name": "KR Market (City Market)",
+      "neighborhood": "other",
+      "area": "Kalasipalya",
+      "address": "Krishna Rajendra Market, Kalasipalya, near Tipu Sultan's Summer Palace, Bengaluru 560002",
+      "price_min": 100,
+      "price_max": 600,
+      "price_unit": "per_visit",
+      "description": "Bangalore's largest and oldest wholesale market, running since 1928 — a sprawling three-floor maze of flowers, vegetables, fruits and spices that supplies a huge chunk of the city's produce. Best hit between 4-8 AM when farmers unload fresh stock at rock-bottom rates.",
+      "why_worth_it": "Asia-scale wholesale prices — bargain hard at dawn and pay half of what any neighbourhood shop charges.",
+      "lat": 12.9622,
+      "lng": 77.5793,
+      "tags": [
+        "iconic",
+        "wholesale",
+        "early-morning"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "Madiwala Vegetable Market",
+      "neighborhood": "btm-layout",
+      "area": "Madiwala",
+      "address": "Madiwala Market, near Silk Board Junction, Total Mall to Krupanidhi College stretch, BTM Layout, Bengaluru 560068",
+      "price_min": 100,
+      "price_max": 500,
+      "price_unit": "per_visit",
+      "description": "One of Bangalore's oldest wholesale mandis, with both roadsides lined by vegetable, fruit and fish sellers from 5 AM to 8:30 PM. Arrive at dawn to catch farmers selling fresh produce at almost half the daytime rate.",
+      "why_worth_it": "Half-price veggies if you show up at 5 AM — the south Bangalore sabzi mandi locals swear by.",
+      "lat": 12.9229,
+      "lng": 77.6196,
+      "tags": [
+        "wholesale",
+        "early-morning",
+        "iconic"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "HOPCOMS, Jayanagar",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 4th Block",
+      "address": "636, 22nd Main Rd, T Block, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru 560011",
+      "price_min": 80,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "Outlet of the farmer-owned HOPCOMS cooperative (running since 1965), selling fresh fruits and vegetables at government-fixed cooperative rates that undercut private shops. Daily rates are even available by SMS.",
+      "why_worth_it": "Cooperative pricing with no middleman markup — consistently cheaper than any local pushcart.",
+      "lat": 12.9293,
+      "lng": 77.5826,
+      "external_url": "http://www.hopcoms.kar.nic.in",
+      "tags": [
+        "iconic",
+        "cooperative",
+        "veg"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "HOPCOMS, HAL 2nd Stage Indiranagar",
+      "neighborhood": "indiranagar",
+      "area": "HAL 2nd Stage, Indiranagar",
+      "address": "10th Main Rd, 7th Cross, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 80,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A HOPCOMS cooperative stall in the heart of Indiranagar, offering fresh fruit and veg at fixed cooperative rates that stand out in an otherwise pricey neighbourhood.",
+      "why_worth_it": "Budget cooperative produce in posh Indiranagar — a rare deal in this part of town.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "http://www.hopcoms.kar.nic.in",
+      "tags": [
+        "cooperative",
+        "veg"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "HOPCOMS, Marathahalli",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "35-36, 4th Main Rd, Ramanjaneya Layout, Aswath Nagar, Marathahalli, Bengaluru 560037",
+      "price_min": 80,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "Marathahalli branch of the HOPCOMS farmer cooperative selling fresh fruit and vegetables at fixed below-market rates, a reliable budget stop along the busy outer ring road belt.",
+      "why_worth_it": "Honest cooperative rates near the ORR — skip the marked-up local stores.",
+      "lat": 12.9568,
+      "lng": 77.7011,
+      "external_url": "http://www.hopcoms.kar.nic.in",
+      "tags": [
+        "cooperative",
+        "veg"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "DMart, Hope Farm Junction Whitefield",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "Hope Farm Junction, Whitefield, Bengaluru 560066",
+      "price_min": 500,
+      "price_max": 3000,
+      "price_unit": "per_visit",
+      "description": "DMart's everyday-low-price hypermarket at Hope Farm Junction, stocking groceries, staples, household goods and apparel sourced direct from manufacturers. A go-to for families doing the monthly stock-up.",
+      "why_worth_it": "Direct-from-manufacturer pricing makes the monthly grocery haul genuinely cheap.",
+      "lat": 12.999,
+      "lng": 77.748,
+      "external_url": "https://www.dmart.in",
+      "tags": [
+        "value",
+        "hypermarket",
+        "monthly-haul"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "DMart, Sultan Palya (Hebbal)",
+      "neighborhood": "hebbal",
+      "area": "Sultan Palya, RT Nagar",
+      "address": "Siroya Sunshine, Sultan Palya, RT Nagar, Bengaluru 560032",
+      "price_min": 500,
+      "price_max": 3000,
+      "price_unit": "per_visit",
+      "description": "The DMart serving the Hebbal/RT Nagar belt, with the chain's signature low prices on groceries, staples and household essentials. Busy and well-stocked, best on weekday mornings.",
+      "why_worth_it": "Everyday low prices on the whole grocery list — north Bangalore's budget stock-up spot.",
+      "lat": 13.024,
+      "lng": 77.599,
+      "external_url": "https://www.dmart.in",
+      "tags": [
+        "value",
+        "hypermarket",
+        "monthly-haul"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "Reliance Smart Bazaar, JP Nagar",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 7th Phase",
+      "address": "No 721, RBI Layout, 7th Phase, Puttenahalli Main Rd, near Brigade Millennium, JP Nagar, Bengaluru 560078",
+      "price_min": 400,
+      "price_max": 2500,
+      "price_unit": "per_visit",
+      "description": "A Reliance Smart Bazaar hypermarket carrying groceries, loose grains and pulses, fresh produce and affordable fashion, with frequent discounts and offers across the store.",
+      "why_worth_it": "Loose grains and pulses plus regular member discounts keep the basket cheap.",
+      "lat": 12.899,
+      "lng": 77.585,
+      "external_url": "https://stores.reliancesmartbazaar.com",
+      "tags": [
+        "value",
+        "hypermarket",
+        "offers"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "Reliance Smart Bazaar, Bellandur",
+      "neighborhood": "bellandur",
+      "area": "Bellandur Gate",
+      "address": "Shop No 78/8, Soul Space Spirit, Service Rd, Bellandur Gate, Bellandur, Bengaluru 560103",
+      "price_min": 400,
+      "price_max": 2500,
+      "price_unit": "per_visit",
+      "description": "Bellandur's Reliance Smart Bazaar hypermarket, open late till 11 PM, stocking fruits and vegetables, staples, dairy, packaged food, home care and budget apparel under one roof.",
+      "why_worth_it": "Open till 11 PM with hypermarket pricing — late-night budget restocking near the tech corridor.",
+      "lat": 12.9255,
+      "lng": 77.676,
+      "external_url": "https://stores.reliancesmartbazaar.com",
+      "tags": [
+        "value",
+        "late-night",
+        "hypermarket"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "Star Bazaar, Koramangala",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 7th Block",
+      "address": "30/1, Main Rd, 7th Block, Koramangala, Bengaluru 560095",
+      "price_min": 400,
+      "price_max": 2500,
+      "price_unit": "per_visit",
+      "description": "A well-stocked, reasonably priced Star Bazaar (Tata enterprise) near the mall on Koramangala 7th Block Main Road, offering fresh food, groceries, vegetables, dry fruits, beauty and apparel. Highly rated by locals for range and value.",
+      "why_worth_it": "Reasonable prices and a big range in pricey Koramangala — a dependable budget all-rounder.",
+      "lat": 12.9347,
+      "lng": 77.6205,
+      "tags": [
+        "value",
+        "hypermarket"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "KPN Fresh, Electronic City",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City Phase 1",
+      "address": "Shop No 5, Green House Layout, Doddathoguru, Jougapalya Main Rd, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 150,
+      "price_max": 1500,
+      "price_unit": "per_visit",
+      "description": "A branch of KPN Fresh, South India's value-focused fruits-and-vegetables supermarket, promising the best quality at the lowest prices with daily discounts on grocery items.",
+      "why_worth_it": "5%-50% off groceries every single day — a value produce supermarket built for budgets.",
+      "lat": 12.841,
+      "lng": 77.677,
+      "external_url": "https://kpnfresh.com",
+      "tags": [
+        "value",
+        "veg",
+        "offers"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "HOPCOMS, HSR Layout Sector 4",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 4",
+      "address": "24th Main Rd, Agara Village, 1st Sector, HSR Layout Sector 4, Bengaluru 560102",
+      "price_min": 80,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "HOPCOMS cooperative outlet in HSR Layout selling fresh fruits and vegetables at fixed cooperative rates, a budget anchor in an otherwise upmarket residential area.",
+      "why_worth_it": "Cooperative-priced produce in HSR — beats the neighbourhood's premium grocers on cost.",
+      "lat": 12.912,
+      "lng": 77.6446,
+      "external_url": "http://www.hopcoms.kar.nic.in",
+      "tags": [
+        "cooperative",
+        "veg"
+      ],
+      "category": "grocery"
+    },
+    {
+      "name": "Cult Gym Koramangala 4th Block",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 4th Block",
+      "address": "19, Sogo Iris, Beside Incubex, S.T. Bed, 4th Block, Koramangala, Bengaluru 560095",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A cult.fit gym in the heart of Koramangala offering strength and functional training plus group classes. Walk-in free trials and app-based monthly cultpass make it an easy budget pick.",
+      "why_worth_it": "Clean, well-equipped cult.fit branch at roughly half the price of legacy chain gyms.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "external_url": "https://www.cult.fit/cult/center/koramangala/cult-gym-koramangala-4th-block/1322",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "iconic",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Gym HSR (Sector 3)",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 3",
+      "address": "17/N, 2nd Floor, 18th Cross Road, HSR Layout Sector 3, Bengaluru 560102",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A busy cult.fit gym in HSR Layout open from early morning to late night, covering weights, functional training and group formats. Free trial available before you commit.",
+      "why_worth_it": "Late hours (5:30am-10:30pm) and budget cultpass pricing in a high-rent area.",
+      "lat": 12.9116,
+      "lng": 77.6446,
+      "external_url": "https://www.cult.fit/cult/center/hsr%20layout/cult-gym-hsr/604",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "late-night",
+        "iconic"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Gym BTM Layout",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 2nd Stage",
+      "address": "2nd Floor, ND Fusion Mall, 16th Main Rd, Stage 2, BTM Layout, Bengaluru 560076",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "Mall-located cult.fit gym in BTM Layout with extended 5am-11pm hours, ideal for shift workers. Strength zones, functional training and cardio under one roof.",
+      "why_worth_it": "Opens 5am, shuts 11pm - rare flexibility at a budget monthly rate.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "external_url": "https://www.cult.fit/cult/cult-pass/bangalore/Cult-Gym-BTM-Layout/351",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "late-night"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Gym Jayanagar 4th Block",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 4th Block",
+      "address": "No 364, 16th Main, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru 560011",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A cult.fit gym in old-Bangalore Jayanagar with full strength and functional setups plus group classes. Handy for residents wanting a modern gym without premium pricing.",
+      "why_worth_it": "Modern equipment in leafy Jayanagar at cultpass budget rates.",
+      "lat": 12.9255,
+      "lng": 77.5832,
+      "external_url": "https://www.cult.fit/cult/center/jayanagar/Cult-Jayanagar,-4th-Block/1295",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Gym JP Nagar 7th Phase",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 7th Phase",
+      "address": "2nd Floor, No 35, Silver Oak Layout, JP Nagar 7th Phase, Bengaluru 560078",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A neighbourhood cult.fit gym serving JP Nagar with weights, cardio and functional training plus access to cult group classes via cultpass. Free trial on offer.",
+      "why_worth_it": "Reliable cult.fit quality deep in South Bangalore for under 1.5k/month.",
+      "lat": 12.9063,
+      "lng": 77.5857,
+      "external_url": "https://www.cult.fit/cult/center/jp-nagar/cult-jp-nagar-7th-phase/42",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Whitefield Hopefarm",
+      "neighborhood": "whitefield",
+      "area": "Whitefield, Hope Farm",
+      "address": "3rd Floor, Arya Hub Mall, Hopefarm, ITPL Main Rd, Prasanth Extension, Whitefield, Bengaluru 560066",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A cult.fit centre near Hope Farm Junction with 6+ workout formats, weights and group classes. Popular among Whitefield's IT crowd for affordable membership.",
+      "why_worth_it": "Multiple workout formats near the Whitefield tech belt at a budget price.",
+      "lat": 12.9986,
+      "lng": 77.748,
+      "external_url": "https://www.cult.fit/cult/center/whitefield/cult-whitefield-hopefarm/102",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Marathahalli",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Above Village Hypermarket, Spice Garden Layout, Marathahalli, Bengaluru 560037",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A well-rated cult.fit fitness centre in Marathahalli offering strength training, functional workouts and group classes. Free trial lets you test before subscribing.",
+      "why_worth_it": "Solid cult.fit branch on the ORR corridor without the premium-gym sticker shock.",
+      "lat": 12.9569,
+      "lng": 77.7011,
+      "external_url": "https://www.cult.fit/cult/center/marathahalli/cult-marathahalli/45",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "iconic"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Gym Electronic City",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City Phase 1",
+      "address": "152/5, 2nd Floor, Neeladri Road, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A cult.fit gym on Neeladri Road serving Electronic City's IT parks with weights, cardio and functional training. Convenient for techies wanting a budget post-work workout.",
+      "why_worth_it": "Right by the E-City tech parks, cheap enough for a daily after-work session.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "external_url": "https://www.cult.fit/cult/center/electronic-city/cult-electronic-city/31",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cult Bellandur",
+      "neighborhood": "bellandur",
+      "area": "Bellandur, Green Glen Layout",
+      "address": "Suramayi Plaza, Near Central Mall, Green Glen Layout, Bellandur, Bengaluru 560103",
+      "price_min": 1000,
+      "price_max": 1500,
+      "price_unit": "per_month",
+      "description": "A cult.fit gym near Central Mall in Bellandur with full strength and functional training plus group formats. Easy access for the Outer Ring Road working crowd.",
+      "why_worth_it": "Budget cult.fit branch steps from Bellandur's ORR offices and apartments.",
+      "lat": 12.9259,
+      "lng": 77.6762,
+      "external_url": "https://www.cult.fit/cult/center/bellandur/cult-bellandur/5",
+      "instagram": "cultfitofficial",
+      "tags": [
+        "ac",
+        "trainers"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Cubbon Park",
+      "neighborhood": "other",
+      "area": "Central Bangalore (near MG Road)",
+      "address": "Kasturba Road, Sampangi Rama Nagar, Bengaluru 560001",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Bangalore's iconic 300-acre green lung, free to enter, with shaded walking and jogging paths reserved for walkers from 5-8am. A favourite for morning runs, yoga and outdoor workout groups.",
+      "why_worth_it": "Free, car-free morning trails under century-old trees - the city's best zero-cost gym.",
+      "lat": 12.9763,
+      "lng": 77.5929,
+      "external_url": "https://www.holidify.com/places/bangalore/cubbon-park-sightseeing-1286.html",
+      "tags": [
+        "free",
+        "iconic",
+        "women-safe",
+        "outdoor"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Lalbagh Botanical Garden",
+      "neighborhood": "jayanagar",
+      "area": "Lalbagh, near Jayanagar",
+      "address": "Mavalli, Lalbagh Road, Bengaluru 560004",
+      "price_min": 0,
+      "price_max": 50,
+      "price_unit": "per_visit",
+      "description": "A historic 240-acre botanical garden with free entry for morning walkers (6-9am) and a nominal day-ticket (around Rs 30-50) otherwise. Loops past the Glass House and lake make for scenic runs and walks.",
+      "why_worth_it": "Free at dawn for walkers; iconic, safe and gorgeous - South Bangalore's outdoor fitness staple.",
+      "lat": 12.9507,
+      "lng": 77.5848,
+      "external_url": "https://karnatakatourism.org/tour-item/lalbagh-botanical-garden/",
+      "tags": [
+        "free",
+        "iconic",
+        "women-safe",
+        "outdoor"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Hebbal Lake Walking Track",
+      "neighborhood": "hebbal",
+      "area": "Hebbal",
+      "address": "Hebbal Lake, Outer Ring Road, Hebbal, Bengaluru 560024",
+      "price_min": 0,
+      "price_max": 40,
+      "price_unit": "per_visit",
+      "description": "A 150-acre lake with a tree-lined walking and jogging track, open early morning to evening with a nominal entry fee (around Rs 40). Birdlife, lawns and benches make it a calm spot for cardio in North Bangalore.",
+      "why_worth_it": "A cheap lakeside loop - North Bangalore's go-to for runs and morning walks.",
+      "lat": 13.0488,
+      "lng": 77.5913,
+      "external_url": "https://lbb.in/bangalore/hebbal-lake-bangalore/",
+      "tags": [
+        "outdoor",
+        "lake"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Kensington Swimming Pool (Ulsoor)",
+      "neighborhood": "indiranagar",
+      "area": "Ulsoor, near Indiranagar",
+      "address": "Kensington Road, Ulsoor, Bengaluru 560008",
+      "price_min": 350,
+      "price_max": 350,
+      "price_unit": "per_visit",
+      "description": "A long-standing public 50-metre swimming pool near Ulsoor/Indiranagar, one of Bengaluru's oldest (est. 1970), with hourly pay-and-swim slots bookable via apps like Playo. A genuine budget option for swimmers.",
+      "why_worth_it": "A full 50m pool for around Rs 350 an hour - solid value for swimming in central Bangalore.",
+      "lat": 12.9819,
+      "lng": 77.6206,
+      "external_url": "https://lbb.in/bangalore/kensington-swimming-pool-9c5a82/",
+      "tags": [
+        "pool",
+        "budget",
+        "iconic"
+      ],
+      "category": "fitness"
+    },
+    {
+      "name": "Zolo Enigma",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 1",
+      "address": "1804, 13th Cross Road, Sector 1, HSR Layout, near BDA Complex, Bengaluru 560102",
+      "price_min": 8500,
+      "price_max": 20000,
+      "price_unit": "per_month",
+      "description": "One of Zolo's flagship HSR Layout coliving PGs, a large unisex property near the BDA Complex with North and South Indian meals, secured Wi-Fi and 24x7 CCTV. Popular with techies working the HSR/Sarjapur corridor.",
+      "why_worth_it": "A reliable, well-run brand-name PG with food and biometric security in the heart of HSR for under 10k a 3-share bed.",
+      "lat": 12.9116,
+      "lng": 77.6389,
+      "external_url": "https://zolostays.com/pg-hostel-near-hsr_layout-in-bangalore-zolo_enigma-zeg",
+      "tags": [
+        "wifi",
+        "food",
+        "women-safe",
+        "iconic"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Zolo Hibiscus",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 1st Stage",
+      "address": "45, 6th Cross Rd, Maruti Nagar, 1st Stage, BTM Layout, Bengaluru 560029",
+      "price_min": 7000,
+      "price_max": 18000,
+      "price_unit": "per_month",
+      "description": "A well-reviewed Zolo coliving PG in BTM Layout 1st Stage, walkable to the BTM bus depot and a quick hop to Koramangala. Fully furnished sharing rooms with housekeeping and meals.",
+      "why_worth_it": "Brand-name coliving in always-affordable BTM with easy connectivity to half the city's tech hubs.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "external_url": "https://zolostays.com/pg-hostel-near-btm_layout-in-bangalore-zolo_hibiscus-2010",
+      "tags": [
+        "wifi",
+        "food",
+        "budget"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Zolo Leela",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar / HAL 3rd Stage",
+      "address": "13/1, 5th Cross Rd, HAL 3rd Stage, Kodihalli, near Leela Palace, Bengaluru 560008",
+      "price_min": 9000,
+      "price_max": 22000,
+      "price_unit": "per_month",
+      "description": "Zolo's Indiranagar-side coliving property near Leela Palace and Manipal Hospital, catering to working professionals and students. Furnished rooms, Wi-Fi, housekeeping and app-based move-in.",
+      "why_worth_it": "A foothold in pub-and-cafe-rich Indiranagar at a managed-PG price instead of full apartment rent.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "https://zolostays.com/pg-hostel-near-indiranagar-in-bangalore-zolo_leela-zololl",
+      "tags": [
+        "wifi",
+        "iconic",
+        "ac"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Zolo Calista",
+      "neighborhood": "hebbal",
+      "area": "Hebbal Kempapura",
+      "address": "3rd Cross Road, Vinayaka Layout, Coffee Board Layout, Hebbal Kempapura, Bengaluru 560024",
+      "price_min": 11000,
+      "price_max": 23000,
+      "price_unit": "per_month",
+      "description": "A Zolo coliving PG about 2 km from Manyata Tech Park, popular with Manyata/Hebbal IT professionals. Furnished rooms with meals, power backup and metered electricity.",
+      "why_worth_it": "Walking-distance-ish to Manyata means no soul-crushing ORR commute, at a sane managed-PG rate.",
+      "lat": 13.041,
+      "lng": 77.597,
+      "external_url": "https://zolostays.com/pg-hostel-near-manyata-in-bangalore-zolo_calista-zoclst",
+      "tags": [
+        "wifi",
+        "food",
+        "techies"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Settl. Springfield",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "24, 1st R Block, 10th Cross Road, Koramangala, Bengaluru 560095",
+      "price_min": 13000,
+      "price_max": 22000,
+      "price_unit": "per_month",
+      "description": "A Settl. coliving home in Koramangala with fully furnished private and double-sharing rooms, 24/7 power backup, high-speed internet, on-site laundry and tech-enabled security. Community-event driven and aimed at young professionals.",
+      "why_worth_it": "Community-first coliving in startup-central Koramangala without committing to a whole flat and broker fees.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "external_url": "https://cofynd.com/co-living/settlspringfield12-koramangala-bangalore",
+      "tags": [
+        "wifi",
+        "community",
+        "women-safe"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Settl. Sofia",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "557, 14th Main Road, HSR Layout, Bengaluru 560102",
+      "price_min": 10000,
+      "price_max": 21000,
+      "price_unit": "per_month",
+      "description": "Settl.'s thoughtfully designed coliving space in HSR Layout offering 1 RK, 1 BHK and coliving PG rooms, fully furnished with modern amenities and managed housekeeping.",
+      "why_worth_it": "Flexible coliving in HSR's startup belt with zero brokerage and a built-in community.",
+      "lat": 12.9141,
+      "lng": 77.6411,
+      "external_url": "https://thesettl.com/apartments-flats-in-settl/bangalore/hsr-sofia/",
+      "tags": [
+        "wifi",
+        "community",
+        "furnished"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "HelloWorld 1stMain",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout Sector 6",
+      "address": "619, 1st Main Rd, Sector 6, HSR Layout, Bengaluru 560102",
+      "price_min": 8000,
+      "price_max": 18000,
+      "price_unit": "per_month",
+      "description": "A vibrant HelloWorld coliving PG in HSR Sector 6 with colourful interiors, private/double/triple sharing rooms, meals, laundry, CCTV and community spaces.",
+      "why_worth_it": "Bright, social coliving with food and laundry bundled, right in HSR's most walkable pocket.",
+      "lat": 12.9081,
+      "lng": 77.6476,
+      "external_url": "https://thehelloworld.com/coliving-in-bangalore/hsr-layout/helloworld-1stmain",
+      "tags": [
+        "wifi",
+        "food",
+        "community"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "HelloWorld Lakeview",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 2nd Stage",
+      "address": "1487, 5th Cross Rd, MCHS Colony, Stage 2, BTM Layout, Bengaluru 560076",
+      "price_min": 7500,
+      "price_max": 17000,
+      "price_unit": "per_month",
+      "description": "HelloWorld's BTM Layout coliving home near MCHS Colony, fully furnished with high-speed Wi-Fi, meals, housekeeping, CCTV and power backup. Easy reach to Koramangala and Silk Board.",
+      "why_worth_it": "All-inclusive coliving with meals in budget-friendly BTM, minutes from Koramangala.",
+      "lat": 12.9132,
+      "lng": 77.6055,
+      "external_url": "https://thehelloworld.com/coliving-in-bangalore/btm-layout/helloworld-lakeview",
+      "tags": [
+        "wifi",
+        "food",
+        "budget"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "HelloWorld BrookeField",
+      "neighborhood": "marathahalli",
+      "area": "AECS Layout, Marathahalli",
+      "address": "738-730, 1st Main Rd, AECS Layout C Block, Marathahalli, Bengaluru 560037",
+      "price_min": 8000,
+      "price_max": 17000,
+      "price_unit": "per_month",
+      "description": "HelloWorld coliving in AECS Layout near Marathahalli and Brookefield, fully furnished with Wi-Fi, meals, housekeeping and community spaces. Convenient for the ORR and Whitefield tech parks.",
+      "why_worth_it": "Furnished coliving with food on the ORR doorstep, cutting the commute to Whitefield offices.",
+      "lat": 12.956,
+      "lng": 77.701,
+      "external_url": "https://thehelloworld.com/coliving-in-bangalore/brookefield/helloworld-brookefield",
+      "tags": [
+        "wifi",
+        "food",
+        "techies"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Stanza Living (Koramangala residences)",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "Koramangala, Bengaluru 560095",
+      "price_min": 12500,
+      "price_max": 22800,
+      "price_unit": "per_month",
+      "description": "Stanza Living runs multiple hospitality-first managed residences across Koramangala (Frankfurt House, Lafayette House) for boys and girls, with furnished AC rooms, professionally run meals, housekeeping, Wi-Fi and round-the-clock security/biometric access.",
+      "why_worth_it": "Hotel-grade managed living with curated meals and security, a notch above the typical Koramangala PG.",
+      "lat": 12.9345,
+      "lng": 77.6266,
+      "external_url": "https://www.stanzaliving.com/bengaluru/pg-hostel-in-koramangala",
+      "tags": [
+        "ac",
+        "food",
+        "women-safe"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Stanza Living (HSR Layout residences)",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "HSR Layout, Bengaluru 560102",
+      "price_min": 9000,
+      "price_max": 21000,
+      "price_unit": "per_month",
+      "description": "Stanza Living operates a large cluster of managed coliving PGs across HSR Layout (e.g. Cork House) with furnished rooms, in-house meals, housekeeping, Wi-Fi and 24x7 security. Tiered pricing from under 10k to premium single rooms.",
+      "why_worth_it": "Tiers from sub-10k shared beds to premium singles, all professionally managed, in HSR's startup hub.",
+      "lat": 12.9121,
+      "lng": 77.6446,
+      "external_url": "https://www.stanzaliving.com/bengaluru/pg-hostel-in-hsr-layout",
+      "tags": [
+        "food",
+        "wifi",
+        "women-safe"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Stanza Living (Electronic City residences)",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City Phase 1",
+      "address": "Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 7500,
+      "price_max": 18000,
+      "price_unit": "per_month",
+      "description": "Stanza Living's managed coliving PGs near Electronic City Phase 1 (Lincoln House, Lisbon House), built for the Infosys/Wipro/Tech Mahindra crowd. Furnished rooms, meals, housekeeping, Wi-Fi and biometric security.",
+      "why_worth_it": "Walk-to-work managed PG with meals beside the E-City tech parks, from under 8k a month.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "external_url": "https://www.stanzaliving.com/bengaluru/pg-hostel-in-electronics-city-phase-1",
+      "tags": [
+        "food",
+        "wifi",
+        "techies"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Colive (BTM Layout)",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout",
+      "address": "BTM Layout, Bengaluru 560076",
+      "price_min": 7000,
+      "price_max": 22000,
+      "price_unit": "per_month",
+      "description": "Colive offers fully furnished gents, ladies and unisex PG homes in BTM Layout with Wi-Fi, meals, security and flexible zero-deposit stays. Well placed between Koramangala, HSR and Electronic City.",
+      "why_worth_it": "Zero-deposit, furnished PG in BTM with meals and flexible stays starting around 7k.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "external_url": "https://www.colive.com/bangalore/pg-in-btm-layout/",
+      "tags": [
+        "wifi",
+        "food",
+        "zero-deposit"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Colive (Bellandur)",
+      "neighborhood": "bellandur",
+      "area": "Bellandur",
+      "address": "Bellandur, Outer Ring Road, Bengaluru 560103",
+      "price_min": 9000,
+      "price_max": 25000,
+      "price_unit": "per_month",
+      "description": "Colive's professionally managed, vetted PG homes near Bellandur on the Outer Ring Road, steps from RMZ Ecoworld, Ecospace and Embassy Tech Village. Furnished single/double/studio rooms with meals and security.",
+      "why_worth_it": "Vetted, furnished coliving right next to ORR's biggest tech parks, so the commute is basically nothing.",
+      "lat": 12.9255,
+      "lng": 77.6748,
+      "external_url": "https://www.colive.com/bangalore/sarjapur/pg-in-bellandur/",
+      "tags": [
+        "wifi",
+        "food",
+        "techies"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Friends PG, JP Nagar",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 2nd Phase",
+      "address": "5th A Cross, 24th Main, JP Nagar 2nd Phase, near R V Dental College, Bengaluru 560078",
+      "price_min": 6000,
+      "price_max": 12000,
+      "price_unit": "per_month",
+      "description": "A long-running independent gents PG in JP Nagar 2nd Phase, 2 minutes from JP Nagar Metro, with rent that bundles food, water, electricity, Wi-Fi and housekeeping. A genuinely budget, locally-known option versus the big chains.",
+      "why_worth_it": "Old-school all-in PG where rent covers food and bills, a true budget win in leafy JP Nagar.",
+      "lat": 12.9077,
+      "lng": 77.5851,
+      "external_url": "https://www.friendspgjpnagar.com/",
+      "tags": [
+        "food",
+        "budget",
+        "wifi"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Zolo (Whitefield coliving)",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "Whitefield, Bengaluru 560066",
+      "price_min": 8000,
+      "price_max": 22000,
+      "price_unit": "per_month",
+      "description": "Zolo runs several coliving spaces across Whitefield near ITPL (Zolo Arena, Novo, Neel, Amethyst, Denver), with fully furnished rooms, high-speed Wi-Fi, daily cleaning, 24/7 security and some communities adding a cafe, library and games room.",
+      "why_worth_it": "Brand-name coliving steps from ITPL with cafe and games perks, from around 8k for a 3-share.",
+      "lat": 12.9698,
+      "lng": 77.7499,
+      "external_url": "https://zolostays.com/coliving-in-whitefield-bangalore",
+      "tags": [
+        "wifi",
+        "techies",
+        "iconic"
+      ],
+      "category": "housing"
+    },
+    {
+      "name": "Dialogues Café",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 4th Block",
+      "address": "21, 3rd Floor, Axis Bank Building, 80 Feet Rd, 4th Block, Koramangala, Bengaluru 560034",
+      "price_min": 200,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A purpose-built work café in the heart of Koramangala with strong WiFi, plenty of plug points and a calm, library-quiet vibe. Doubles as a casual coworking spot with a pay-by-the-hour option, board games and a mini library where long laptop sessions are welcome.",
+      "why_worth_it": "A full work-cafe set-up for the price of one good coffee and a snack.",
+      "lat": 12.9344,
+      "lng": 77.6155,
+      "tags": [
+        "wifi",
+        "ac",
+        "work",
+        "laptop-friendly"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "DYU Art Café",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 8th Block",
+      "address": "No. 23, MIG KHB Colony, 1st Cross Rd, Koramangala 8th Block, Bengaluru 560095",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "An iconic rustic bungalow café with a Kerala-style open courtyard, art on the walls and a shelf of books. Deliberately no WiFi and limited plug points, so it suits reading, sketching and slow analog work more than heavy laptop sessions.",
+      "why_worth_it": "That dreamy courtyard ambience and unlimited sitting for under ₹400 a head.",
+      "lat": 12.9335,
+      "lng": 77.631,
+      "tags": [
+        "iconic",
+        "books",
+        "quiet",
+        "veg-friendly"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Atta Galatta",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 5th Block",
+      "address": "134, 6th Cross Rd, KHB Colony, 5th Block, Koramangala, Bengaluru 560095",
+      "price_min": 150,
+      "price_max": 350,
+      "price_unit": "per_person",
+      "description": "Bangalore's best-loved independent bookstore-café, with 10,000+ regional-language titles, a quiet reading hall and a busy events calendar. Free WiFi and plug points at most tables. Order a filter coffee and jaggery cake and settle in among the shelves.",
+      "why_worth_it": "Browse, read and work in a true Bangalore literary landmark for the cost of a chai.",
+      "lat": 12.9343,
+      "lng": 77.628,
+      "external_url": "https://attagalatta.com",
+      "instagram": "https://instagram.com/attagalatta",
+      "tags": [
+        "iconic",
+        "books",
+        "wifi",
+        "work"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Third Wave Coffee (Indiranagar)",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar HAL 2nd Stage",
+      "address": "12th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+      "price_min": 200,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "An Indiranagar outlet of the homegrown roaster with ample seating, free WiFi and power sockets. Minimalist interiors and good filter make it a reliable remote-work pick.",
+      "why_worth_it": "Dependable WiFi, sockets and great coffee from a beloved local chain, not an overpriced import.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "https://thirdwavecoffeeroasters.com",
+      "tags": [
+        "wifi",
+        "ac",
+        "work",
+        "coffee"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Paper & Pie",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "842/A, 100 Feet Rd, Metro Pillar 55, Indira Nagar 1st Stage, Indiranagar, Bengaluru 560038",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A genuinely work-first café with workstations, a podcast room, a conference room and private pods for calls. Extensive tea/coffee menu and savoury bites keep you fuelled through the day.",
+      "why_worth_it": "Meeting rooms and call-friendly pods usually cost coworking money — here a coffee gets you in.",
+      "lat": 12.9698,
+      "lng": 77.641,
+      "instagram": "https://instagram.com/paperandpie.in",
+      "tags": [
+        "wifi",
+        "work",
+        "quiet",
+        "meeting-rooms"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Cafe Terra",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "846, Ground & 1st Floor, Double Rd, 1st Stage, Indiranagar, Bengaluru 560038",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A long-running cosy two-floor Indiranagar café famous for crepes, waffles and a wall of comics. Laid-back and quiet on weekday mornings, making it easy to camp with a laptop.",
+      "why_worth_it": "Comics, crepes and a chill corner to work — a quirky, affordable Indiranagar institution.",
+      "lat": 12.9716,
+      "lng": 77.6395,
+      "tags": [
+        "wifi",
+        "work",
+        "veg-friendly"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Beanlore Coffee Roasters",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "450, 17th Cross Rd, Sector 4, HSR Layout, Bengaluru 560102",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "Part specialty café, part workspace, with dedicated meeting pods, plenty of power outlets and warm interiors. Built for HSR's startup and remote-work crowd.",
+      "why_worth_it": "Café prices but coworking perks — call pods and chargers without a membership.",
+      "lat": 12.9116,
+      "lng": 77.6446,
+      "instagram": "https://instagram.com/beanlore.coffee",
+      "tags": [
+        "wifi",
+        "work",
+        "ac",
+        "meeting-rooms"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "myHQ Day Pass (HSR Layout)",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "Multiple partner coworking spaces across HSR Layout, Bengaluru",
+      "price_min": 200,
+      "price_max": 350,
+      "price_unit": "per_day",
+      "description": "Book a single-day desk at a partner coworking space in HSR via the myHQ app, with free WiFi, printing and power backup included. No lock-in, no monthly rent.",
+      "why_worth_it": "A real coworking desk for the day from ₹200 — the cheapest legit way to get a proper office.",
+      "lat": 12.9121,
+      "lng": 77.6446,
+      "external_url": "https://myhq.in/bangalore/flexi/coworking-space-in-hsr-layout",
+      "tags": [
+        "coworking",
+        "wifi",
+        "day-pass",
+        "work"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "myHQ Day Pass (BTM Layout)",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout",
+      "address": "Multiple partner coworking spaces across BTM Layout, Bengaluru",
+      "price_min": 200,
+      "price_max": 350,
+      "price_unit": "per_day",
+      "description": "Affordable flexi day passes at partner coworking spaces in BTM Layout, bookable on the myHQ app with WiFi, printing and standard office amenities. Ideal for freelancers avoiding monthly commitments.",
+      "why_worth_it": "Proper coworking in budget-friendly BTM for ₹200–₹350 a day, no contract.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "external_url": "https://myhq.in/bangalore/flexi/coworking-space-in-btm-layout",
+      "tags": [
+        "coworking",
+        "wifi",
+        "day-pass",
+        "work"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Jayanagar City Central Library",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar",
+      "address": "Elephant Rock Rd, near South End Circle, Jayanagar, Bengaluru 560011",
+      "price_min": 0,
+      "price_max": 200,
+      "price_unit": "per_month",
+      "description": "One of Bangalore's most popular public libraries, with tens of thousands of books across English, Kannada and other languages, quiet reading halls and a small adjoining park. Membership is very cheap.",
+      "why_worth_it": "Quiet study halls and a near-free membership — unbeatable for a focused work or study day.",
+      "lat": 12.929,
+      "lng": 77.583,
+      "tags": [
+        "library",
+        "quiet",
+        "study",
+        "free"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "The Caffeine Baar",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 9th Block",
+      "address": "1424/81, 2nd Floor, 9th Block, Jayanagar, Bengaluru 560069",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A bright, well-lit Jayanagar specialty-coffee café and roastery with large glass windows and WiFi, known as a peaceful, distraction-free spot for laptop work. Extensive manual-brew coffee menu and snacks.",
+      "why_worth_it": "Calm, sunlit corner in south Bangalore where nobody rushes you off your laptop.",
+      "lat": 12.927,
+      "lng": 77.5938,
+      "tags": [
+        "wifi",
+        "work",
+        "quiet",
+        "ac"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Beetle Café",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar",
+      "address": "JP Nagar, Bengaluru 560078",
+      "price_min": 200,
+      "price_max": 350,
+      "price_unit": "per_person",
+      "description": "A quiet, dependable JP Nagar café with reliable WiFi, power sockets and a relaxed weekday vibe. Burgers, sandwiches and pizzas keep the average spend low.",
+      "why_worth_it": "One of the cheapest work-friendly cafés around — sockets, WiFi and food at ₹250–350.",
+      "lat": 12.91,
+      "lng": 77.5855,
+      "tags": [
+        "wifi",
+        "work",
+        "budget",
+        "veg-friendly"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Paper & Pie (Whitefield)",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "66/2, ITPL Main Rd, Whitefield, Bengaluru 560066",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "The Whitefield outpost of the work-focused café, with multiple charging points, bright seating and rooms suited to calls and client meetings. WiFi throughout.",
+      "why_worth_it": "A genuine work café in the tech belt with charging at every seat — rare in Whitefield.",
+      "lat": 12.9858,
+      "lng": 77.7363,
+      "instagram": "https://instagram.com/paperandpie.in",
+      "tags": [
+        "wifi",
+        "work",
+        "ac",
+        "meeting-rooms"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "myHQ Day Pass (Marathahalli / Sarjapur Rd)",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli",
+      "address": "Multiple partner coworking spaces along Sarjapur–Marathahalli Rd, Bengaluru",
+      "price_min": 200,
+      "price_max": 400,
+      "price_unit": "per_day",
+      "description": "Flexi day passes at partner coworking spaces on the Marathahalli–Sarjapur corridor, bookable via myHQ with WiFi, printing and power backup. Handy for the outer-ring tech crowd.",
+      "why_worth_it": "Skip the café noise — a full coworking desk near ORR from ₹200 a day.",
+      "lat": 12.9569,
+      "lng": 77.7011,
+      "external_url": "https://myhq.in/bangalore/flexi/work-cafes-in-sarjapur--marathahalli-road",
+      "tags": [
+        "coworking",
+        "wifi",
+        "day-pass",
+        "work"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "GoodWorks Infinity Park (Day Pass)",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City",
+      "address": "21, 2nd Main Rd, Infinity Park, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 250,
+      "price_max": 400,
+      "price_unit": "per_day",
+      "description": "A large coworking campus in Electronic City offering day passes with high-speed internet, power backup and proper office amenities. A budget alternative to renting near the IT parks.",
+      "why_worth_it": "Reliable high-speed desk in E-City for a day's pass instead of a hefty monthly lease.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "external_url": "https://www.goodworks.in/coworking-space-bangalore/electronic-city-infinity-park/",
+      "tags": [
+        "coworking",
+        "wifi",
+        "day-pass",
+        "work"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Antler India",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "2nd Floor, #2981, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Global day-zero startup generator and early-stage VC that runs a residency in Bengaluru where aspiring founders match into co-founder teams, validate ideas, and raise pre-seed. Application-based, no cash fee; Antler invests for equity.",
+      "why_worth_it": "Free to join, get a co-founder and a first cheque without putting any money in.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "https://www.antler.co/location/india",
+      "instagram": "https://www.linkedin.com/company/antlerglobal",
+      "tags": [
+        "free",
+        "equity",
+        "iconic"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Peak XV Surge",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "No. 278, Defence Colony, 2nd Stage, 100 Feet Road, Indiranagar, Bengaluru 560038",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "The rapid-scale seed program from Peak XV Partners (formerly Sequoia Capital India), running cohorts out of its Indiranagar office. Founders get up to $3M in seed capital plus weeks of company-building workshops.",
+      "why_worth_it": "No fee to apply; selected founders get serious seed capital and Sequoia-lineage mentorship.",
+      "lat": 12.9735,
+      "lng": 77.6405,
+      "external_url": "https://surge.peakxv.com/",
+      "instagram": "https://www.linkedin.com/company/peakxvpartners",
+      "tags": [
+        "free",
+        "equity",
+        "iconic"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "NSRCEL @ IIM Bangalore",
+      "neighborhood": "other",
+      "area": "Bannerghatta Road",
+      "address": "IIM Bangalore Campus, Bannerghatta Main Road, Bengaluru 560076",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "IIM Bangalore's entrepreneurship hub, one of India's oldest academic incubators, running the Launchpad pre-incubation cohort, Incubation Program, and Women Startup Program. Most flagship programs have no participation fee and offer grants to top teams.",
+      "why_worth_it": "No participation fee, real mentorship from IIMB faculty, and grants for top teams.",
+      "lat": 12.8932,
+      "lng": 77.601,
+      "external_url": "https://nsrcel.org/",
+      "instagram": "https://www.linkedin.com/company/nsrceliimb",
+      "tags": [
+        "free",
+        "iconic",
+        "women-safe"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Axilor Ventures",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "Transit, 363/364, 8th Main Road, 3rd Block, Koramangala, Bengaluru 560034",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Founded by Infosys co-founders Kris Gopalakrishnan and S.D. Shibulal, Axilor runs a structured early-stage accelerator out of Koramangala focused on SaaS, healthcare, supply chain and agri startups. No fee; participation is equity/investment based.",
+      "why_worth_it": "Infosys-founder pedigree and a free, structured runway from idea to seed in startup-central Koramangala.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "external_url": "https://axilor.com/",
+      "instagram": "https://www.linkedin.com/company/axilor-ventures",
+      "tags": [
+        "free",
+        "equity",
+        "iconic"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "IKP EDEN",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "Near Forum Mall, Koramangala, Bengaluru 560095",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "A hardware and deep-science incubator and makerspace a short walk from Forum Mall, stocked with high-end fabrication gear and a workshop area open to monthly members. Focuses on medical devices and engineering hardware startups.",
+      "why_worth_it": "Access to crores of machinery and a hardware accelerator without buying a single tool yourself.",
+      "lat": 12.9345,
+      "lng": 77.6118,
+      "external_url": "https://ikpeden.com/",
+      "instagram": "https://www.facebook.com/ikpeden/",
+      "tags": [
+        "free",
+        "hardware",
+        "makerspace"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "NASSCOM 10,000 Startups Warehouse",
+      "neighborhood": "other",
+      "area": "Domlur",
+      "address": "Diamond District, Lower Ground Floor DD3, HAL Old Airport Road, Domlur, Bengaluru 560008",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "NASSCOM's flagship startup warehouse in Domlur, a co-working and incubation space hosting dozens of early-stage startups with mentorship, investor access and labs (IoT, device). Selected startups get subsidised or free seats.",
+      "why_worth_it": "NASSCOM-backed desk space and ecosystem access for early startups at little to no cost.",
+      "lat": 12.9609,
+      "lng": 77.6387,
+      "external_url": "https://10000startups.com/",
+      "instagram": "https://www.linkedin.com/company/10000startups",
+      "tags": [
+        "free",
+        "wifi",
+        "coworking"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Workbench Projects",
+      "neighborhood": "indiranagar",
+      "area": "Halasuru / Ulsoor",
+      "address": "Under Halasuru Metro Station, Ulsoor, Bengaluru 560008",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "An iconic 5,000 sq ft makerspace, fab lab and startup incubator tucked under the Halasuru metro station, packed with CNC routers, 3D printers and power tools. A beloved spot where tinkerers turn into hardware founders.",
+      "why_worth_it": "One of Bengaluru's most beloved makerspaces, where tinkerers turn into hardware founders.",
+      "lat": 12.9767,
+      "lng": 77.626,
+      "external_url": "https://workbenchprojects.com/",
+      "instagram": "https://www.linkedin.com/company/workbenchprojects",
+      "tags": [
+        "free",
+        "makerspace",
+        "iconic",
+        "wifi"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "C-CAMP",
+      "neighborhood": "other",
+      "area": "GKVK Campus, Bellary Road",
+      "address": "NCBS-TIFR Campus, GKVK Post, Bellary Road, Bengaluru 560065",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "The Centre for Cellular and Molecular Platforms, one of India's premier life-sciences incubators next to NCBS, supporting biotech, healthtech, agri and drug-discovery startups since 2009. Backed by the Department of Biotechnology with grants and lab access.",
+      "why_worth_it": "World-class biolab infrastructure and government grant funding for deep-science founders, free to selected startups.",
+      "lat": 13.0716,
+      "lng": 77.5803,
+      "external_url": "https://www.ccamp.res.in/",
+      "instagram": "https://www.linkedin.com/company/centre-for-cellular-and-molecular-platforms-c-camp-",
+      "tags": [
+        "free",
+        "biotech",
+        "iconic"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Bangalore Bioinnovation Centre",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City Phase 1",
+      "address": "Helix Biotech Park, IBAB Campus, Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "A Government-of-Karnataka life-sciences incubator inside the Helix Biotech Park, offering 50,000+ sq ft of shared instrumentation, molecular biology, microbiology and fermentation labs to biotech startups. Caters to medtech, pharma, agri and industrial biotech.",
+      "why_worth_it": "Crores of shared lab gear and central instrumentation that no early biotech could afford alone.",
+      "lat": 12.8398,
+      "lng": 77.677,
+      "external_url": "https://bioinnovationcentre.com/",
+      "instagram": "https://www.facebook.com/bioinnovationcentre/",
+      "tags": [
+        "free",
+        "biotech",
+        "labs"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "SAP.iO Foundry Bangalore",
+      "neighborhood": "bellandur",
+      "area": "Devarabeesanahalli / Bellandur",
+      "address": "6th Floor, RMZ Ecoworld Campus 8A, Outer Ring Road, Devarabeesanahalli, Bengaluru 560103",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "SAP's zero-equity, zero-fee startup accelerator at RMZ Ecoworld, a 13-week program helping B2B and enterprise-tech startups integrate with SAP's customer ecosystem. Cohort-based with mentorship, tech access and go-to-market support.",
+      "why_worth_it": "A no-fee, no-equity accelerator that plugs your startup straight into SAP's enterprise customers.",
+      "lat": 12.9248,
+      "lng": 77.6845,
+      "external_url": "https://sap.io/foundry-bangalore/",
+      "instagram": "https://www.linkedin.com/company/sap-io",
+      "tags": [
+        "free",
+        "no-equity",
+        "enterprise"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Microsoft for Startups",
+      "neighborhood": "other",
+      "area": "Lavelle Road / Richmond Circle",
+      "address": "Salarpuria Sattva Cosmo Lavelle, #9, Lavelle Road, Richmond Circle, Bengaluru 560025",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Microsoft's Founders Hub and startup support program, with its Bengaluru base at the Lavelle Road office and Microsoft Tech Center. Offers up to $150k in Azure credits, GitHub and tooling plus mentorship, open to startups with no funding required.",
+      "why_worth_it": "Up to $150k in free cloud credits and tools with no equity taken, idea-stage startups welcome.",
+      "lat": 12.9719,
+      "lng": 77.597,
+      "external_url": "https://www.microsoft.com/en-in/startups",
+      "instagram": "https://www.linkedin.com/showcase/microsoftforstartups",
+      "tags": [
+        "free",
+        "no-equity",
+        "cloud-credits"
+      ],
+      "category": "accelerators"
+    },
+    {
+      "name": "Accel India (Atrium)",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "Confident Electra, No. 886/A, 6th Cross, 6th Block, Opposite Koramangala Club, Koramangala, Bengaluru 560095",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Accel India is one of the country's most influential early-stage VC firms, backers of Flipkart, Swiggy, Freshworks and Myntra, operating out of Koramangala. Their accelerator program 'Atoms' and founder events make this a hub of the startup ecosystem.",
+      "why_worth_it": "Walking distance from half of Bangalore's unicorns, and the Koramangala address that minted Flipkart.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "external_url": "https://www.accel.com",
+      "tags": [
+        "iconic",
+        "early-stage",
+        "koramangala"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Lightspeed India Partners",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "address": "162, 4th Block, 15th Main Road, Koramangala, Bengaluru 560095",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "The India arm of Lightspeed Venture Partners runs from Koramangala, backing companies like OYO, Udaan, Razorpay and ShareChat. A heavyweight on the early and growth-stage scene.",
+      "why_worth_it": "One of the most active growth investors in India, parked right in startup-central Koramangala.",
+      "lat": 12.9345,
+      "lng": 77.6212,
+      "external_url": "https://lsip.com",
+      "tags": [
+        "iconic",
+        "growth-stage",
+        "koramangala"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Peak XV Partners (formerly Sequoia India)",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "No. 278, Defence Colony, 2nd Stage, 100 Feet Road, Indiranagar, Bengaluru 560038",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Peak XV, the rebranded Sequoia India & SEA, is among the largest VC franchises in the region with its Surge accelerator and a portfolio spanning Zomato, CRED and Druva. Their Indiranagar office sits on the 100 Feet Road strip.",
+      "why_worth_it": "The most storied VC name in India, on the iconic 100 Feet Road in Indiranagar.",
+      "lat": 12.9719,
+      "lng": 77.6412,
+      "external_url": "https://www.peakxv.com",
+      "tags": [
+        "iconic",
+        "growth-stage",
+        "indiranagar"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Prime Venture Partners",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "address": "Ground Floor, Alpha Block, Sigma Tech Park, Varthur Road, Phase 2, Whitefield, Bengaluru 560066",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "A respected seed-stage firm (founded by Sanjay Swamy, Shripati Acharya and Amit Somani) known for early bets on fintech and SaaS like MoneyTap, Quizizz and Niyo. Based in Whitefield's Sigma Tech Park.",
+      "why_worth_it": "A founder-friendly seed fund that gets in early, out in Whitefield's tech-park belt.",
+      "lat": 12.9568,
+      "lng": 77.7211,
+      "external_url": "https://primevp.in",
+      "tags": [
+        "seed-stage",
+        "fintech",
+        "whitefield"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Kalaari Capital",
+      "neighborhood": "whitefield",
+      "area": "Whitefield (ITPB)",
+      "address": "Ground Floor, Unit-2 Navigator Building, ITPB, Whitefield Road, Bengaluru 560066",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Led by Vani Kola, Kalaari is one of India's prominent early-stage funds, having backed Dream11, Myntra, Cure.fit and Snapdeal. Their office sits inside the sprawling International Tech Park (ITPB) in Whitefield.",
+      "why_worth_it": "A pioneering woman-led VC inside ITPB, the campus where Bangalore's IT boom started.",
+      "lat": 12.9856,
+      "lng": 77.7367,
+      "external_url": "https://kalaari.com",
+      "tags": [
+        "iconic",
+        "early-stage",
+        "women-led"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Nexus Venture Partners",
+      "neighborhood": "bellandur",
+      "area": "Kadubeesanahalli, Outer Ring Road",
+      "address": "Unit 201, 2nd Floor, The Address, Kadubeesanahalli, Marathahalli Outer Ring Road, Bengaluru 560103",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "A cross-border early-stage firm investing in India and the US, with portfolio names like Postman, Delhivery, Druva and Unacademy. Their Bengaluru office is on the Outer Ring Road near Bellandur/Kadubeesanahalli.",
+      "why_worth_it": "Backers of Postman and Delhivery, sitting right on the ORR tech corridor.",
+      "lat": 12.9392,
+      "lng": 77.6967,
+      "external_url": "https://nexusvp.com",
+      "tags": [
+        "early-stage",
+        "cross-border",
+        "orr"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Stellaris Venture Partners",
+      "neighborhood": "indiranagar",
+      "area": "New Thippasandra",
+      "address": "2nd Floor, Indiqube Coral, DOS Colony, New Thippasandra, Bengaluru 560075",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "An early-stage tech fund founded by Alok Goyal, Rahul Chowdhri and Ritesh Banglani, backing Whatfix, Mamaearth and Slintel. Based out of an Indiqube co-working space near Indiranagar/New Thippasandra.",
+      "why_worth_it": "Early backers of Mamaearth and Whatfix, tucked just off Indiranagar.",
+      "lat": 12.9698,
+      "lng": 77.6536,
+      "external_url": "https://www.stellarisvp.com",
+      "tags": [
+        "early-stage",
+        "saas",
+        "indiranagar"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "India Quotient",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "address": "3rd Floor, J.K. Plaza, 788, 12th Main Road, Indiranagar, Bengaluru 560038",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "An early-stage fund known for contrarian, India-first bets like ShareChat, Sugar Cosmetics and LoanTap. Their office sits on Indiranagar's busy 12th Main.",
+      "why_worth_it": "The fund that spotted ShareChat and Sugar early, right on Indiranagar's 12th Main.",
+      "lat": 12.9722,
+      "lng": 77.6408,
+      "external_url": "https://indiaquotient.in",
+      "tags": [
+        "early-stage",
+        "india-first",
+        "indiranagar"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Blume Ventures",
+      "neighborhood": "indiranagar",
+      "area": "Domlur",
+      "address": "Blume Villa, 5th Main Road, 2nd Stage, Domlur, Bengaluru 560008",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "One of India's best-known homegrown seed funds, backing Unacademy, Dunzo, Spinny and GreyOrange. Their Bengaluru base, 'Blume Villa', is in leafy Domlur next to Indiranagar.",
+      "why_worth_it": "A homegrown seed fund with a literal villa, in quiet Domlur off Indiranagar.",
+      "lat": 12.9609,
+      "lng": 77.6387,
+      "external_url": "https://blume.vc",
+      "tags": [
+        "iconic",
+        "seed-stage",
+        "homegrown"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "3one4 Capital",
+      "neighborhood": "other",
+      "area": "St. Marks Road (Central Bengaluru)",
+      "address": "Office 1, 5th Floor, 1 Sobha, 50, St. Marks Road, Bengaluru 560001",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "An early-stage fund founded by Pranav and Siddarth Pai, backing Licious, Open, Jupiter and DarwinBox. Their office is on central St. Marks Road in the CBD.",
+      "why_worth_it": "Backers of Licious and Open, in the heart of the central business district.",
+      "lat": 12.9716,
+      "lng": 77.599,
+      "external_url": "https://www.3one4capital.com",
+      "tags": [
+        "early-stage",
+        "central",
+        "saas"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Chiratae Ventures (formerly IDG Ventures India)",
+      "neighborhood": "other",
+      "area": "Commissariat Road (Central Bengaluru)",
+      "address": "3rd Floor, A & B Wing, Sobha Pearl, Commissariat Road, Bengaluru 560025",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "One of India's largest tech-focused VCs (formerly IDG Ventures India), with early stakes in Lenskart, FirstCry, Myntra and PolicyBazaar. Based on central Commissariat Road off MG Road.",
+      "why_worth_it": "Early money behind Lenskart and FirstCry, steps from MG Road.",
+      "lat": 12.9698,
+      "lng": 77.6098,
+      "external_url": "https://www.chiratae.com",
+      "tags": [
+        "iconic",
+        "tech",
+        "central"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Elevation Capital",
+      "neighborhood": "bellandur",
+      "area": "Panathur, Outer Ring Road",
+      "address": "31 Campus, 9th Floor, Unit 902-903, Panathur, Outer Ring Road, Bengaluru 560103",
+      "price_min": 0,
+      "price_max": 0,
+      "price_unit": "free",
+      "description": "Formerly SAIF Partners, Elevation is a top-tier early-stage fund behind Paytm, Meesho, Swiggy and Urban Company, with its Bengaluru office on the Outer Ring Road at Panathur. A major name in Indian venture.",
+      "why_worth_it": "Early backers of Swiggy and Meesho, now on the ORR tech corridor at Panathur.",
+      "lat": 12.9352,
+      "lng": 77.6967,
+      "external_url": "https://www.elevationcapital.com",
+      "tags": [
+        "iconic",
+        "early-stage",
+        "growth-stage"
+      ],
+      "category": "vcs"
+    },
+    {
+      "name": "Smart Dhobi Express Laundry",
+      "neighborhood": "koramangala",
+      "area": "Koramangala 5th Block",
+      "address": "524, 3rd Cross Rd, KHB Block, 5th Block, Koramangala, Bengaluru 560095",
+      "price_min": 25,
+      "price_max": 60,
+      "price_unit": "per_day",
+      "description": "A prompt, locally-loved neighbourhood laundry in KHB Block Koramangala charging by the kilo for wash-and-fold, with polite staff and quick turnaround. Rated around 4.4 on Justdial across dozens of reviews.",
+      "why_worth_it": "One of the cheapest yet most reliable kilo-rate dhobis in pricey Koramangala.",
+      "lat": 12.9352,
+      "lng": 77.6245,
+      "tags": [
+        "iconic",
+        "wash-fold"
+      ],
+      "external_url": "https://www.smartlaundry.co.in/",
+      "category": "services"
+    },
+    {
+      "name": "FCOM India Tailoring",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar (Binnamangala)",
+      "address": "2nd Floor, 12, 8th Cross Rd, Binnamangala 1st Stage, Indiranagar, Bengaluru 560038",
+      "price_min": 150,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A tucked-away Indiranagar tailoring outfit known for neat stitching, alterations and blouse work at reasonable charges, with doorstep pickup and drop. Reviewers praise the clean finish and on-time delivery.",
+      "why_worth_it": "Honest, precise alterations in Indiranagar without boutique markups.",
+      "lat": 12.9784,
+      "lng": 77.6408,
+      "tags": [
+        "alterations",
+        "doorstep"
+      ],
+      "external_url": "https://fcomindia.com/",
+      "category": "services"
+    },
+    {
+      "name": "The Phone Repair HSR",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "address": "HSR Layout (near Kudlu Gate & Harlur Road), Bengaluru 560102",
+      "price_min": 200,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A specialist HSR mobile repair shop handling screen replacement, battery, charging and chip-level motherboard work, including iPhones. Known for fast, affordable fixes on small jobs.",
+      "why_worth_it": "Walk-in screen and battery swaps done same-day at fair prices.",
+      "lat": 12.9081,
+      "lng": 77.6476,
+      "tags": [
+        "iphone",
+        "same-day"
+      ],
+      "category": "services"
+    },
+    {
+      "name": "Green Trends Unisex Hair & Style Salon",
+      "neighborhood": "jp-nagar",
+      "area": "JP Nagar 1st Phase",
+      "address": "No. 1358, 9th Cross Rd, near Rajashekar Hospital, ITI Layout, 1st Phase, JP Nagar, Bengaluru 560078",
+      "price_min": 140,
+      "price_max": 400,
+      "price_unit": "per_person",
+      "description": "A branch of the popular budget unisex salon chain offering trending haircuts, grooming and waxing at value prices, with a 4.6 Google rating. Regular haircut starts around ₹140.",
+      "why_worth_it": "Clean, AC, brand-chain haircut for the price of a street barber.",
+      "lat": 12.9078,
+      "lng": 77.5852,
+      "tags": [
+        "ac",
+        "unisex",
+        "women-safe"
+      ],
+      "external_url": "https://salons.mygreentrends.in/",
+      "category": "services"
+    },
+    {
+      "name": "MastWash Laundry (BTM)",
+      "neighborhood": "btm-layout",
+      "area": "BTM Layout 1st & 2nd Stage",
+      "address": "BTM Layout, Bengaluru 560076",
+      "price_min": 59,
+      "price_max": 99,
+      "price_unit": "per_day",
+      "description": "A wash-and-fold laundry covering BTM 1st and 2nd Stage with 24/7 free home pickup and drop, from about ₹59/kg. Reviewers note well-washed, fragrant, properly segregated clothes delivered on time.",
+      "why_worth_it": "Free doorstep pickup and tidy folds at hostel-friendly per-kilo rates.",
+      "lat": 12.9166,
+      "lng": 77.6101,
+      "tags": [
+        "doorstep",
+        "wash-fold"
+      ],
+      "external_url": "https://mastwash.com/",
+      "category": "services"
+    },
+    {
+      "name": "Laptop Store Marathahalli",
+      "neighborhood": "marathahalli",
+      "area": "Marathahalli (Airport Road)",
+      "address": "G6, Ground Floor, Sigma Arcade, HAL Old Airport Road, near Brand Factory, Marathahalli, Bengaluru 560037",
+      "price_min": 300,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A long-running laptop service centre on Marathahalli's Old Airport Road doing diagnostics, OS installs, upgrades and chip-level repairs by certified technicians. Part of a 30+ branch network with strong ratings.",
+      "why_worth_it": "Trusted laptop diagnostics and OS installs without inflated service-centre fees.",
+      "lat": 12.9569,
+      "lng": 77.7011,
+      "tags": [
+        "laptop",
+        "certified"
+      ],
+      "external_url": "https://www.laptopstoreindia.in/",
+      "category": "services"
+    },
+    {
+      "name": "Cell Phone World (Electronic City)",
+      "neighborhood": "electronic-city",
+      "area": "Electronic City Phase 1",
+      "address": "Electronic City Phase 1, Bengaluru 560100",
+      "price_min": 150,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "An Electronic City mobile repair shop handling cracked screens, batteries, water damage, charging pins and software issues. Reviewers highlight quick turnarounds and same-day fixes.",
+      "why_worth_it": "Fast, cheap phone fixes right by the tech-park crowd.",
+      "lat": 12.8452,
+      "lng": 77.6602,
+      "tags": [
+        "same-day",
+        "affordable"
+      ],
+      "external_url": "https://cellphoneworld.in/",
+      "category": "services"
+    },
+    {
+      "name": "Smart IT Hub (Bellandur)",
+      "neighborhood": "bellandur",
+      "area": "Bellandur",
+      "address": "RR Plaza, 1st Floor, Kasavanahalli Main Road, near Shell Petrol Bunk, Bellandur, Bengaluru 560035",
+      "price_min": 300,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A well-reviewed Bellandur computer and laptop repair shop doing desktop servicing, display fixes and OS work at low flat rates (around ₹400 for desktop service). Customers praise the skillful, honest service.",
+      "why_worth_it": "Straightforward laptop and desktop fixes at flat, fair prices near the lake.",
+      "lat": 12.9255,
+      "lng": 77.6784,
+      "tags": [
+        "laptop",
+        "honest"
+      ],
+      "category": "services"
+    },
+    {
+      "name": "Spin Cycles Laundry (Hebbal)",
+      "neighborhood": "hebbal",
+      "area": "Dasarahalli, Hebbal",
+      "address": "Dasarahalli, Hebbal, Bengaluru 560024",
+      "price_min": 40,
+      "price_max": 90,
+      "price_unit": "per_day",
+      "description": "A Hebbal-area branch of the Spin Cycles laundry and dry-cleaning chain with home pickup and delivery, also offering shoe and bag repair. Convenient for North Bangalore residents.",
+      "why_worth_it": "Pickup-and-drop laundry plus shoe repair under one roof in North Bangalore.",
+      "lat": 13.0358,
+      "lng": 77.597,
+      "tags": [
+        "doorstep",
+        "shoe-repair"
+      ],
+      "external_url": "https://www.spincycles.in/bangalore/dasarahalli-hebbal",
+      "category": "services"
+    },
+    {
+      "name": "Khanate",
+      "neighborhood": "jayanagar",
+      "area": "Jayanagar 4th Block",
+      "address": "19, 1st Floor, 30th Cross, 12th Main, Jayanagar 4th Block, Bengaluru 560011",
+      "price_min": 150,
+      "price_max": 400,
+      "price_unit": "per_visit",
+      "description": "A long-established Jayanagar tailoring name (operating since the late 1970s–80s) blending traditional ethnic-wear and bespoke stitching with everyday alterations. A well-known neighbourhood institution.",
+      "why_worth_it": "Old-school Jayanagar stitching expertise that has outlasted the trends for decades.",
+      "lat": 12.925,
+      "lng": 77.5938,
+      "tags": [
+        "iconic",
+        "ethnic-wear"
+      ],
+      "category": "services"
+    }
+  ],
+  "events": [
+    {
+      "title": "Cubbon Run – Free Saturday 5K",
+      "venue": "Cubbon Park (near Bal Bhavan / Queen's statue)",
+      "neighborhood": "other",
+      "area": "Cubbon Park, Central Bangalore",
+      "price": 0,
+      "description": "Free community 5K timed run drawing 200+ runners; flat shaded loop, all paces welcome.",
+      "cadence": "1st & 3rd Saturday, 6:00 AM",
+      "link": "https://cubbon.run/"
+    },
+    {
+      "title": "PaceX RunClub Morning Runs",
+      "venue": "Cubbon Park & Ecoworld, Bellandur",
+      "neighborhood": "bellandur",
+      "area": "Bellandur / Cubbon Park",
+      "price": 0,
+      "description": "Free 3K & 5K group morning runs for all levels with a friendly running community.",
+      "cadence": "Weekly weekend mornings",
+      "link": "https://pacexrunclub.com/community/run-club"
+    },
+    {
+      "title": "Cadance Run Club",
+      "venue": "HSR Layout (rotating routes)",
+      "neighborhood": "hsr-layout",
+      "area": "HSR Layout",
+      "price": 0,
+      "description": "Free group runs every Wednesday and Saturday exploring new routes around the city.",
+      "cadence": "Every Wednesday & Saturday",
+      "link": "https://www.runwithcadance.com/"
+    },
+    {
+      "title": "Cubbon Reads – Silent Reading Community",
+      "venue": "Cubbon Park (near Bal Bhavan)",
+      "neighborhood": "other",
+      "area": "Cubbon Park, Central Bangalore",
+      "price": 0,
+      "description": "Bring a book and read silently with hundreds of fellow readers on the grass; no phones, no chatter.",
+      "cadence": "Every Saturday, 9:00 AM–12:30 PM",
+      "link": "https://www.instagram.com/cubbonreads/"
+    },
+    {
+      "title": "Freedom Jam – Sunday Jam",
+      "venue": "Rotating open-air venues",
+      "neighborhood": "other",
+      "area": "Varies (central Bangalore)",
+      "price": 0,
+      "description": "Musicians' movement: bands play all genres for free, audience watches ticket-free.",
+      "cadence": "1st Sunday of every month",
+      "link": "https://freedomjam.in/"
+    },
+    {
+      "title": "Bajabies (Bangalore Jamming Buddies) Open Jam",
+      "venue": "Rotating jam spaces",
+      "neighborhood": "other",
+      "area": "Varies",
+      "price": 200,
+      "description": "Sunday open jam sessions where amateur and pro musicians bring instruments and play together.",
+      "cadence": "Most Sundays",
+      "link": "https://www.meetup.com/bajabies/"
+    },
+    {
+      "title": "Dialogues Cafe Music Jam",
+      "venue": "Dialogues Cafe (with Garage 747)",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 150,
+      "description": "Walk-in informal jam evening; INR 150 includes snacks and a beverage, bring your instrument.",
+      "cadence": "Weekly evening session",
+      "link": "https://lbb.in/bangalore/live-music-venues-in-bangalore/"
+    },
+    {
+      "title": "That Open Mic at That Comedy Club",
+      "venue": "That Comedy Club, Lotus Building, Srinivagilu Main Rd",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 99,
+      "description": "Bi-weekly stand-up open mic where new and seasoned comics test fresh material on a cheap cover.",
+      "cadence": "Bi-weekly evenings",
+      "link": "https://highape.com/bangalore/events/lYn6YJR2em-that-open-mic-that-comedy-club"
+    },
+    {
+      "title": "Lahe Lahe Open Mic",
+      "venue": "Lahe Lahe community space",
+      "neighborhood": "indiranagar",
+      "area": "Indiranagar",
+      "price": 150,
+      "description": "Community open mic for music, poetry and comedy in a cozy arts space with a moderate entry fee.",
+      "cadence": "Weekly",
+      "link": "https://wanderlog.com/place/details/226098/lahe-lahe"
+    },
+    {
+      "title": "Cuckoo Hostel Sunday Comedy",
+      "venue": "Cuckoo Hostel",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 100,
+      "description": "Experimental Sunday stand-up shows in an intimate hostel courtyard; low cover, new comics.",
+      "cadence": "Sundays",
+      "link": "https://www.quora.com/What-are-some-open-mic-stand-up-comedy-places-in-Bangalore"
+    },
+    {
+      "title": "Atta Galatta Poetry & Spoken Word Evenings",
+      "venue": "Atta Galatta bookstore",
+      "neighborhood": "koramangala",
+      "area": "Koramangala, 5th Block",
+      "price": 0,
+      "description": "Free poetry recitations, slam poetry and spoken-word evenings hosted in a bookstore event space.",
+      "cadence": "Most weekends",
+      "link": "https://lbb.in/bangalore/atta-galatta-koramangala/"
+    },
+    {
+      "title": "Let Poetry Be – Monthly Poetry Meet",
+      "venue": "Atta Galatta",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 0,
+      "description": "Theme-based poetry group: members submit and read original work aloud at a monthly gathering.",
+      "cadence": "Monthly",
+      "link": "https://lbb.in/bangalore/poetry-venues-bangalore/"
+    },
+    {
+      "title": "Sunday Soul Sante Flea Market",
+      "venue": "Jayamahal Palace Grounds",
+      "neighborhood": "hebbal",
+      "area": "Jayamahal Road (near Cantonment)",
+      "price": 0,
+      "description": "India's loved flea market: 200+ stalls of handcrafted fashion, decor, art, food and live music.",
+      "cadence": "Quarterly weekends",
+      "link": "https://www.sundaysoulsante.com/"
+    },
+    {
+      "title": "Soul Flea at Jayamahal Palace",
+      "venue": "Jayamahal Palace",
+      "neighborhood": "hebbal",
+      "area": "Jayamahal",
+      "price": 0,
+      "description": "Free-entry artisan pop-up market plus a farmers' section, live music and street food.",
+      "cadence": "Monthly weekends",
+      "link": "https://www.facebook.com/soulflea1/"
+    },
+    {
+      "title": "Mimansa Farmers Market",
+      "venue": "Mimansa, Koramangala",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 0,
+      "description": "Free-entry weekend market with fresh organic produce, homemade goods and workshops.",
+      "cadence": "Select weekends",
+      "link": "https://lbb.in/bangalore/mimansa-farmers-market-koramangala/"
+    },
+    {
+      "title": "Bengaluru Farmers' Market (Karen Anand) – Whitefield",
+      "venue": "Whitefield event grounds",
+      "neighborhood": "whitefield",
+      "area": "Whitefield",
+      "price": 0,
+      "description": "Curated weekend farmers' and artisanal food market with gourmet stalls and produce.",
+      "cadence": "Periodic weekends",
+      "link": "https://lbb.in/bangalore/bengaluru-farmers-market-whitefield/"
+    },
+    {
+      "title": "Bhoomi Santhe Organic Market",
+      "venue": "Bhoomi Campus",
+      "neighborhood": "other",
+      "area": "Sahakar Nagar / North Bangalore",
+      "price": 0,
+      "description": "Bi-monthly organic farmers' market: farm-fresh veggies, millets, jaggery, pickles and snacks.",
+      "cadence": "Bi-monthly weekend",
+      "link": "https://bhoominetwork.org/event/bhoomi-santhe"
+    },
+    {
+      "title": "BHIVE Startup & Entrepreneur Community (BSEC) Meetup",
+      "venue": "BHIVE Workspace, 18th D Main, 6th Block",
+      "neighborhood": "koramangala",
+      "area": "Koramangala",
+      "price": 0,
+      "description": "Free recurring meetup connecting founders, investors and operators with talks and networking.",
+      "cadence": "Monthly",
+      "link": "https://www.meetup.com/bhive-startup-and-entrepreneur-community/"
+    },
+    {
+      "title": "eChai Bangalore Startup Network",
+      "venue": "Rotating co-working spaces",
+      "neighborhood": "koramangala",
+      "area": "Koramangala / HSR",
+      "price": 0,
+      "description": "Free casual startup networking meetups for founders, marketers and product folks.",
+      "cadence": "Regular (multiple per month)",
+      "link": "https://www.meetup.com/startupbangalore/"
+    },
+    {
+      "title": "Bangalore Mountaineering Club Day Treks",
+      "venue": "Various trailheads near Bangalore",
+      "neighborhood": "other",
+      "area": "Western Ghats / outskirts",
+      "price": 1200,
+      "description": "Organised beginner-friendly day and weekend treks with transport and guides; budget pricing.",
+      "cadence": "Most weekends",
+      "link": "https://www.bmcadventures.com/collections/upcoming-treks-adventures"
+    },
+    {
+      "title": "Nandi Hills Sunrise Trek/Cycle",
+      "venue": "Nandi Hills (60 km from city)",
+      "neighborhood": "other",
+      "area": "Nandi Hills",
+      "price": 0,
+      "description": "Popular easy sunrise trek up Nandi Hills; cycling groups also ride out from the city for free.",
+      "cadence": "Weekends",
+      "link": "https://tripbae.com/st_tour/nandi-hills-sunrise-trek/"
+    },
+    {
+      "title": "Lalbagh Botanical Garden Morning Walk",
+      "venue": "Lalbagh Botanical Garden",
+      "neighborhood": "jayanagar",
+      "area": "Lalbagh / Mavalli",
+      "price": 0,
+      "description": "Free entry for walkers/runners 6–9 AM; 240-acre garden with a glasshouse and lake.",
+      "cadence": "Daily, 6:00–9:00 AM (free window)",
+      "link": "https://www.trawell.in/karnataka/bangalore/lalbagh-botanical-gardens"
+    },
+    {
+      "title": "Kanteerava Stadium Public Track",
+      "venue": "Sree Kanteerava Stadium, Kasturba Road",
+      "neighborhood": "other",
+      "area": "Central Bangalore",
+      "price": 0,
+      "description": "Publicly accessible 400m 8-lane synthetic track for runs and intervals.",
+      "cadence": "Daily mornings",
+      "link": "https://magicpin.in/blog/india/bangalore/fitness/best-running-tracks-trails-bangalore"
+    },
+    {
+      "title": "National Gallery of Modern Art (NGMA)",
+      "venue": "Manikyavelu Mansion, 49 Palace Road",
+      "neighborhood": "other",
+      "area": "Palace Road",
+      "price": 20,
+      "description": "Modern Indian art (Ravi Varma, Sher-Gil, Tagore) for INR 20; free for students up to class XII.",
+      "cadence": "Tue–Sun, 10 AM–5 PM",
+      "link": "https://ngmaindia.gov.in/ngma_bangaluru.asp"
+    }
+  ]
+}

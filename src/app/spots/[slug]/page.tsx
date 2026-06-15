@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getSpotBySlug } from "@/lib/queries/spots";
 import { formatPrice, METRO_LINES, CATEGORIES } from "@/lib/constants";
-import { MapView } from "@/components/MapView";
+import { MapViewLoader } from "@/components/MapViewLoader";
 import { PickButton } from "@/components/PickButton";
 
 export const revalidate = 3600;
@@ -56,7 +56,7 @@ export default async function SpotPage({ params }: { params: Params }) {
           </div>
           <h1 className="text-3xl font-bold tracking-tight">{spot.name}</h1>
         </div>
-        <span className="shrink-0 rounded-full bg-[var(--color-accent-soft)] px-3 py-1.5 font-semibold text-[var(--color-accent)]">
+        <span className="nums shrink-0 rounded-full bg-[var(--color-accent-soft)] px-3 py-1.5 font-semibold text-[var(--color-accent)]">
           {formatPrice(spot.price_min, spot.price_max, spot.price_unit)}
         </span>
       </div>
@@ -99,7 +99,7 @@ export default async function SpotPage({ params }: { params: Params }) {
 
       {spot.lat != null && spot.lng != null && (
         <div className="mt-6">
-          <MapView
+          <MapViewLoader
             single
             height="280px"
             spots={[{ slug: spot.slug, name: spot.name, lat: spot.lat, lng: spot.lng, emoji: cat?.emoji }]}
@@ -109,7 +109,7 @@ export default async function SpotPage({ params }: { params: Params }) {
 
       <div className="mt-8 rounded-[var(--radius)] border border-dashed border-[var(--color-line)] p-4 text-sm text-[var(--color-muted)]">
         Spot added by the community. Prices are indicative — found something off?{" "}
-        <Link href="/submit" className="text-[var(--color-accent)] hover:underline">
+        <Link href="/community?tab=add" className="text-[var(--color-accent)] hover:underline">
           Suggest an edit
         </Link>
         .

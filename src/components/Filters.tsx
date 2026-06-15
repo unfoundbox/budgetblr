@@ -35,12 +35,12 @@ export function Filters({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
           onKeyDown={(e) => {
             if (e.key === "Enter") setParam("q", (e.target as HTMLInputElement).value);
           }}
-          className="w-full rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2 text-sm outline-none focus:border-[var(--color-accent)]"
+          className="w-full rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2 text-base outline-none"
         />
         <select
           value={neighborhood}
           onChange={(e) => setParam("neighborhood", e.target.value)}
-          className="rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]"
+          className="rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2 text-base outline-none"
         >
           <option value="">All areas</option>
           {neighborhoods.map((n) => (
@@ -50,13 +50,13 @@ export function Filters({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <button className="chip" data-active={!category} onClick={() => setParam("category", "")}>
+        <button className="chip glass" data-active={!category} onClick={() => setParam("category", "")}>
           All
         </button>
         {CATEGORIES.map((c) => (
           <button
             key={c.slug}
-            className="chip"
+            className="chip glass"
             data-active={category === c.slug}
             onClick={() => setParam("category", c.slug)}
           >
@@ -69,7 +69,7 @@ export function Filters({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
         {PRICE_BANDS.map((b) => (
           <button
             key={b.slug}
-            className="chip"
+            className="chip glass"
             data-active={price === b.slug}
             onClick={() => setParam("price", b.slug)}
           >

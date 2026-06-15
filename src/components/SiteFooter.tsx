@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 font-bold">
-            <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-xs text-white">₹</span>
+            <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold tracking-tight text-white">blr</span>
             budgetblr
           </div>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
@@ -27,7 +27,8 @@ export function SiteFooter() {
           <ul className="space-y-1.5 text-[var(--color-muted)]">
             <li><Link href="/guide" className="hover:text-[var(--color-ink)]">First-week guide</Link></li>
             <li><Link href="/transport" className="hover:text-[var(--color-ink)]">Getting around</Link></li>
-            <li><Link href="/submit" className="hover:text-[var(--color-ink)]">Add a spot</Link></li>
+            <li><Link href="/community?tab=add" className="hover:text-[var(--color-ink)]">Add a spot</Link></li>
+            <li><Link href="/community" className="hover:text-[var(--color-ink)]">Vote on spots</Link></li>
           </ul>
         </div>
         <div className="text-sm">

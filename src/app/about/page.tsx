@@ -4,23 +4,20 @@ export const metadata = { title: "About budgetblr" };
 
 export default function AboutPage() {
   return (
-    <div>
-      <section className="bg-paper border-b border-[var(--color-line)]">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
-          <span className="chip" data-active="true">₹ For the love of cheap dosas</span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
-            About{" "}
-            <span className="font-bold">budget<span className="text-[var(--color-accent)]">blr</span></span>
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-[var(--color-muted)]">
-            A crowdsourced directory for living well in Bengaluru without overpaying — built by
-            locals, for everyone trying to make namma ooru work on a real budget.
-          </p>
-        </div>
-      </section>
+    <div className="mx-auto max-w-3xl px-4 py-12">
+      <header>
+        <span className="chip" data-active="true">₹ For the love of cheap dosas</span>
+        <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
+          About{" "}
+          <span className="font-bold">budget<span className="text-[var(--color-accent)]">blr</span></span>
+        </h1>
+        <p className="mt-5 text-lg text-[var(--color-muted)]">
+          A crowdsourced directory for living well in Bengaluru without overpaying — built by
+          locals, for everyone trying to make namma ooru work on a real budget.
+        </p>
+      </header>
 
-      <section className="mx-auto max-w-3xl px-4 py-12">
-        <div className="space-y-6">
+      <div className="mt-10 space-y-6">
           <div className="card p-6">
             <h2 className="text-xl font-semibold">What it is</h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
@@ -43,7 +40,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold">How spots get added</h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
               Anyone can{" "}
-              <Link href="/submit" className="font-semibold text-[var(--color-accent)] hover:underline">
+              <Link href="/community?tab=add" className="font-semibold text-[var(--color-accent)] hover:underline">
                 submit a spot
               </Link>{" "}
               they love — a name, where it is, roughly what it costs and why it's worth it. Every
@@ -77,7 +74,7 @@ export default function AboutPage() {
               honest.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="/submit" className="btn-accent text-sm">
+              <Link href="/community?tab=add" className="btn-accent text-sm">
                 + Add a spot
               </Link>
               <Link
@@ -88,8 +85,7 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

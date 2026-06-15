@@ -17,7 +17,7 @@ export function SpotCard({ spot }: { spot: SpotWithRefs }) {
             </p>
           </div>
         </div>
-        <span className="shrink-0 rounded-full bg-[var(--color-accent-soft)] px-2.5 py-1 text-sm font-semibold text-[var(--color-accent)]">
+        <span className="nums shrink-0 rounded-full bg-[var(--color-accent-soft)] px-2.5 py-1 text-sm font-semibold text-[var(--color-accent)]">
           {formatPrice(spot.price_min, spot.price_max, spot.price_unit)}
         </span>
       </div>
@@ -37,7 +37,7 @@ export function SpotCard({ spot }: { spot: SpotWithRefs }) {
             {spot.metro_walk_min ? ` · ${spot.metro_walk_min}m walk` : ""}
           </span>
         )}
-        <span className="ml-auto inline-flex items-center gap-1">
+        <span className="nums ml-auto inline-flex items-center gap-1">
           ♥ {spot.locals_count} {spot.locals_count === 1 ? "local" : "locals"}
         </span>
       </div>

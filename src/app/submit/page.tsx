@@ -115,7 +115,6 @@ export default function SubmitPage() {
         </p>
       </form>
 
-      <style>{`.inp{width:100%;border:1px solid var(--color-line);background:var(--color-surface);border-radius:.6rem;padding:.55rem .75rem;font-size:.9rem;outline:none}.inp:focus{border-color:var(--color-accent)}`}</style>
     </div>
   );
 }

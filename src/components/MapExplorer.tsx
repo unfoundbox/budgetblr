@@ -28,6 +28,7 @@ export interface ExplorerSpot {
 }
 
 const KEY = process.env.NEXT_PUBLIC_STADIA_API_KEY;
+const AI_ENABLED = process.env.NEXT_PUBLIC_AI_SEARCH === "1";
 const PRICE_ORDER = ["free", "under_100", "under_300", "under_1000"];
 const STATE_KEY = "blr_map_state";
 const SPOTS_CACHE = "blr_spots_cache";
@@ -228,22 +229,26 @@ export function MapExplorer({ spots }: { spots: ExplorerSpot[] }) {
       {/* selected spot card */}
       {selected && <SelectedCard spot={selected} onClose={() => setSelected(null)} />}
 
-      {/* Ask AI — coming soon */}
+      {/* Ask AI */}
       {askOpen && (
-        <div className="glass-strong absolute bottom-20 left-3 z-[1001] w-[20rem] max-w-[calc(100vw-1.5rem)] rounded-[var(--radius)] p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 font-semibold">
-              <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
-              Ask AI
+        AI_ENABLED ? (
+          <AskChat spots={spots} onClose={() => setAskOpen(false)} onPick={(s) => { setAskOpen(false); flyTo(s); }} />
+        ) : (
+          <div className="glass-strong absolute bottom-20 left-3 z-[1001] w-[20rem] max-w-[calc(100vw-1.5rem)] rounded-[var(--radius)] p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 font-semibold">
+                <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
+                Ask AI
+              </div>
+              <button onClick={() => setAskOpen(false)} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
             </div>
-            <button onClick={() => setAskOpen(false)} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+              ✨ Smart natural-language search is{" "}
+              <strong className="text-[var(--color-ink)]">coming soon</strong>. For now, use the search
+              bar up top or the category filters to find spots.
+            </p>
           </div>
-          <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-            ✨ Smart natural-language search is{" "}
-            <strong className="text-[var(--color-ink)]">coming soon</strong>. For now, use the search
-            bar up top or the category filters to find spots.
-          </p>
-        </div>
+        )
       )}
 
       {/* bottom-left: Ask AI FAB */}
@@ -329,6 +334,99 @@ function SelectedCard({ spot, onClose }: { spot: ExplorerSpot; onClose: () => vo
         <Link href={`/spots/${spot.slug}`} className="btn-accent flex-1 justify-center text-sm">View details</Link>
         <a href={mapsHref(spot)} target="_blank" rel="noopener" className="chip">📍 Directions</a>
         <button onClick={toggleSave} className="chip" data-active={saved} aria-pressed={saved}>{saved ? "♥" : "♡"}</button>
+      </div>
+    </div>
+  );
+}
+
+interface ChatMsg { role: "user" | "bot"; text: string; results?: ExplorerSpot[] }
+
+function AskChat({
+  spots,
+  onClose,
+  onPick,
+}: {
+  spots: ExplorerSpot[];
+  onClose: () => void;
+  onPick: (s: ExplorerSpot) => void;
+}) {
+  const [q, setQ] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [msgs, setMsgs] = useState<ChatMsg[]>([
+    { role: "bot", text: "Hey! Ask me anything about budget spots in Bengaluru — try “cheap dosa near Indiranagar”, “free coworking”, or “best filter coffee”." },
+  ]);
+  const endRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [msgs, busy]);
+
+  const bySlug = new Map(spots.map((s) => [s.slug, s]));
+
+  async function send() {
+    const text = q.trim();
+    if (!text || busy) return;
+    setMsgs((m) => [...m, { role: "user", text }]);
+    setQ("");
+    setBusy(true);
+    try {
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: text }),
+      });
+      if (!res.ok) {
+        const msg = res.status === 503 ? "AI search isn’t switched on yet — use the search bar up top for now." : "Hmm, that didn’t go through. Try again?";
+        setMsgs((m) => [...m, { role: "bot", text: msg }]);
+      } else {
+        const data = await res.json();
+        const results = (data.slugs as string[]).map((s) => bySlug.get(s)).filter(Boolean) as ExplorerSpot[];
+        setMsgs((m) => [...m, { role: "bot", text: data.reply || "Here's what I found.", results }]);
+      }
+    } catch {
+      setMsgs((m) => [...m, { role: "bot", text: "Network hiccup — try again in a moment." }]);
+    }
+    setBusy(false);
+  }
+
+  return (
+    <div className="glass-strong absolute bottom-20 left-3 z-[1001] flex max-h-[72vh] w-[24rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-[var(--radius)]">
+      <div className="flex items-center justify-between border-b border-[var(--color-line)] p-3">
+        <div className="flex items-center gap-2 font-semibold">
+          <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-[9px] font-extrabold text-white">blr</span>
+          budgetblr Search
+        </div>
+        <button onClick={onClose} aria-label="Close" className="text-[var(--color-muted)] hover:text-[var(--color-ink)]">✕</button>
+      </div>
+      <div className="flex-1 space-y-3 overflow-y-auto p-3">
+        {msgs.map((m, i) =>
+          m.role === "user" ? (
+            <div key={i} className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-sm bg-[var(--color-accent)] px-3 py-2 text-sm text-white">{m.text}</div>
+          ) : (
+            <div key={i} className="space-y-2">
+              <div className="w-fit max-w-[90%] rounded-2xl rounded-bl-sm bg-[var(--color-bg)] px-3 py-2 text-sm leading-relaxed">{m.text}</div>
+              {m.results?.map((s) => (
+                <button key={s.slug} onClick={() => onPick(s)} className="card flex w-full items-center gap-2 p-2.5 text-left">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[6px] text-sm" style={{ background: CATEGORY_COLOR[s.category] }}>{emojiFor(s.category)}</span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-sm font-medium">{s.name}</span>
+                    <span className="block truncate text-xs text-[var(--color-muted)]">{[s.neighborhood, s.price, s.category].filter(Boolean).join(" · ")}</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          ),
+        )}
+        {busy && <div className="w-fit rounded-2xl rounded-bl-sm bg-[var(--color-bg)] px-3 py-2 text-sm text-[var(--color-muted)]">Searching…</div>}
+        <div ref={endRef} />
+      </div>
+      <div className="flex gap-2 border-t border-[var(--color-line)] p-3">
+        <input
+          autoFocus
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && send()}
+          placeholder="Ask about budget spots…"
+          className="w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2 text-base outline-none"
+        />
+        <button onClick={send} disabled={busy} className="btn-accent shrink-0 text-sm disabled:opacity-60">Ask</button>
       </div>
     </div>
   );
